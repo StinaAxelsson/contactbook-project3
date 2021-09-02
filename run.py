@@ -1,3 +1,14 @@
+# start - a welcome message and a menu with 6 different task to choose between
+# a while loop while user use the program
+# funtions for every task in the menu
+# validating function so the user input the right value
+# add contact + update sheet
+# search for existing contact (by name, number or email)
+# delete a contact
+# Show all the existing contacts with a linebreak after every contact
+# Delete all the contats in the book
+# Exit to break the program from anywhere the user is
+
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -14,7 +25,8 @@ SHEET = GSPREAD_CLIENT.open('contact_book')
 
 contact = SHEET.worksheet('contacts')
 data = contact.get_all_values()
-print(data)
+
+
 
 print("-------------------------------------------------------")
 print("------------------------WELCOME!-----------------------")
