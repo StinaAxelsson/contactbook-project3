@@ -1,7 +1,7 @@
 # start - a welcome message and a menu with 6 different task to choose between
-# a while loop while user use the program
+# a while loop while user use the program (check)
 # funtions for every task in the menu
-# validating function so the user input the right value
+# validating function so the user input the right value (check)
 # add contact + update sheet
 # search for existing contact (by name, number or email)
 # delete a contact
@@ -35,7 +35,7 @@ def start():
         print("3. Search contact")
         print("4. Exit\n")
 
-        user_input = input("Please enter the number of the task here: \n")     
+        user_input = input("Please enter the number of the task here: \n")
 
         if validate_menu_choise(user_input):
             break
@@ -44,7 +44,7 @@ def start():
 
 def validate_menu_choise(task_number):
     """
-    Check so the user input is a number between 1-6 for the menu, 
+    Check so the user input is a number between 1-6 for the menu,
     and provide an error messege if its not!
     """
     try:
@@ -68,10 +68,18 @@ def add_new_contact(task_number):
         while True:
             first_name = input("First Name: \n")
             if not first_name.isalpha():
-                print("Invalid characters. Please enter First Name with letters a-z")
+                print("Please enter First Name with letters a-z")
             else:
                 break
         add_new_contact["Fname"] = first_name
+
+        while True:
+            last_name = input("Last Name: \n")
+            if not last_name.isalpha():
+                print("Please enter Last Name with letters a-z")
+            else:
+                break
+        add_new_contact["Lname"] = last_name
 
         return update_worksheet_contact(add_new_contact)
 
@@ -79,9 +87,9 @@ def add_new_contact(task_number):
 def update_worksheet_contact(add_new_contact):
     """
     Updating the google sheet with new contact informaion in contactbook.
-    Provides a validation message for user that the update is done. 
+    Provides a validation message for user that the update is done.
     """
-    print("saving contact in contactbook...\n")
+    print("Saving contact in contactbook...\n")
     new_worksheet = SHEET.worksheet('contacts')
     new_worksheet.append_row([x for x in add_new_contact.values()])
     print("Contact is now saved and contactbook is updated! \n")
