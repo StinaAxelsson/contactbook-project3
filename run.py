@@ -31,8 +31,10 @@ def start():
     while True:
         print("MENU")
         print("1. Add new contact")
-        print("2. Delete contact")
-        print("3. Search contact")
+        print("2. View all contacts")
+        print("3. Delete a contact")
+        print("4. Search contact")
+        print("5. Reset contactbook")
         print("4. Exit\n")
 
         user_input = input("Please enter the number of the task here: \n")
@@ -40,6 +42,7 @@ def start():
         if validate_menu_choise(user_input):
             break
     add_new_contact(user_input)
+    show_all_contacts(user_input)
 
 
 def validate_menu_choise(task_number):
@@ -114,6 +117,19 @@ def update_worksheet_contact(add_new_contact):
     new_worksheet.append_row([x for x in add_new_contact.values()])
     print("Contact is now saved and contactbook is updated! \n")
     start()
+    
+
+#not working
+def show_all_contacts(task_number):
+    """
+    Open a list with all the existing contacts in the 
+    contactbook from google sheet.
+    """
+    if task_number == 2:
+        all_contacts = SHEET.worksheet('contacts').get_all_values()
+        print(all_contacts)
+    else:
+        print("Your contactbook is empty")
 
 
 def main():
