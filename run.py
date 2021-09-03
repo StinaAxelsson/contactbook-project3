@@ -39,11 +39,13 @@ def start():
 
         if validate_menu_choise(user_input):
             break
+    add_new_contact(user_input)
 
 
 def validate_menu_choise(task_number):
     """
-    Check so the user input is a number between 1-6, and provide an error messege if its not!
+    Check so the user input is a number between 1-6 for the menu, 
+    and provide an error messege if its not!
     """
     try:
         if(int(task_number) < 1 or int(task_number) > 6):
@@ -53,6 +55,37 @@ def validate_menu_choise(task_number):
         return False
 
     return True
+
+
+def add_new_contact(task_number):
+    """
+    Add a new contact with first name, last name, phone number and email
+    and check so the user input is correct, otherwise a error shows.
+    """
+    if task_number == "1":
+        add_new_contact = {}
+
+        while True:
+            first_name = input("First Name: \n")
+            if not first_name.isalpha():
+                print("Invalid characters. Please enter First Name with letters a-z")
+            else:
+                break
+        add_new_contact["Fname"] = first_name
+
+        return update_worksheet_contact(add_new_contact)
+
+
+def update_worksheet_contact(add_new_contact):
+    """
+    Updating the google sheet with new contact informaion in contactbook.
+    Provides a validation message for user that the update is done. 
+    """
+    print("saving contact in contactbook...\n")
+    new_worksheet = SHEET.worksheet('contacts')
+    new_worksheet.append_row([x for x in add_new_contact.values()])
+    print("Contact is now saved and contactbook is updated! \n")
+    start()
 
 
 def main():
