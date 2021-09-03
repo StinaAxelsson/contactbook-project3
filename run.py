@@ -23,14 +23,10 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('contact_book')
 
-contact = SHEET.worksheet('contacts')
-data = contact.get_all_values()
-
 
 def start():
     """
-    Start menu with a welcome message and a menu
-    that the user can choose between 6 different tasks.
+    Start menu that the user can choose between 6 different tasks.
     """
     while True:
         print("MENU")
@@ -40,22 +36,23 @@ def start():
         print("4. Exit\n")
 
         user_input = input("Please enter the number of the task here: \n")     
-        if user_input == '1':
-            print("Thank you BYE")
+
+        if validate_menu_choise(user_input):
             break
-        elif user_input == '2':
-            create_new_contact()
-        elif user_input == '3':
-            print("Not valid")
 
 
-def create_new_contact():
-    first_name = input("First name: \n")
-    last_name = input("Last name: \n")
-    phone_number = input("Phone number: \n")
-    email = input("E-Mail: \n")
+def validate_menu_choise(task_number):
+    """
+    Check so the user input is a number between 1-6, and provide an error messege if its not!
+    """
+    try:
+        if(int(task_number) < 1 or int(task_number) > 6):
+            raise ValueError(f'{task_number} is not a valid number')
+    except ValueError as e:
+        print(f'Try again, {e} enter a number between 1-6')
+        return False
 
-    print(f'{first_name} {last_name}, {phone_number}, {email} is now added in your contact book!\n')
+    return True
 
 
 def main():
@@ -63,7 +60,6 @@ def main():
     contains alla the functions for the program
     """
     start()
-    create_new_contact()
 
 
 print("-------------------------------------------------------")
