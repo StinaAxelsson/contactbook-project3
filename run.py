@@ -26,33 +26,26 @@ SHEET = GSPREAD_CLIENT.open('contact_book')
 contact = SHEET.worksheet('contacts')
 data = contact.get_all_values()
 
+
 def start():
     """
     Start menu with a welcome message and a menu
     that the user can choose between 6 different tasks.
     """
-    print("-------------------------------------------------------")
-    print("------------------------WELCOME!-----------------------")
-    print("---------------This is a contact book app--------------")
-    print("------Please choose what you want to do in the menu----")
-    print("-------------------------------------------------------\n")
+    while True:
+        print("MENU")
+        print("1. Add new contact")
+        print("2. Delete contact")
+        print("3. Search contact")
+        print("4. Exit\n")
 
-def menu():
-    """
-    While loop of the menu for the user to choose what they will do,
-    and while true the program will go, and if the user want to exit the
-    program will break and start over
-    """
-    print("MENU")
-    print("1. Add a contact")
-    print("2. Search for a contact")
-    print("3. Delete a contact")
-    print("4. Show all contacts in contact book")
-    print("5. Delete all contact")
-    print("6. Exit\n") 
+        user_input = input("Please enter the number of the task here: \n")     
+        if user_input == '1':
+            break
+        else:
+            print("not valid")
 
-    task = int(input("Pleaste enter the number of the task you want to do here:\n"))
-    
+    return user_input
 
 
 def main():
@@ -60,7 +53,11 @@ def main():
     contains alla the functions for the program
     """
     start()
-    menu()
 
 
+print("-------------------------------------------------------")
+print("------------------------WELCOME!-----------------------")
+print("---------------This is a contact book app--------------")
+print("------Please choose what you want to do in the menu----")
+print("-------------------------------------------------------\n")
 main()
