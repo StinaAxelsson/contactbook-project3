@@ -2,8 +2,8 @@
 # a while loop while user use the program (check)
 # funtions for every task in the menu
 # validating function so the user input the right value (check)
-# add contact + update sheet
-# search for existing contact (by name, number or email)
+# add contact + update sheet (check)
+# search for existing contact (by name, number or relaton (email))
 # delete a contact
 # Show all the existing contacts with a linebreak after every contact
 # Delete all the contats in the book
@@ -81,6 +81,27 @@ def add_new_contact(task_number):
                 break
         add_new_contact["Lname"] = last_name
 
+        while True:
+            phone_number = int(input("Phone Number: \n"))
+            if not phone_number.__int__():
+                print("Please use digits only\n")
+            else:
+                break
+        add_new_contact["Number"] = phone_number
+
+        while True:
+            relation = input("Relation: \n")
+            if not relation.isalpha():
+                print("Please only use letters a-z, no space\n")
+            else:
+                break
+        add_new_contact["Relation"] = relation
+
+        print("You have added:\n")
+        print(f"Name: {first_name.upper()} {last_name.upper()}")
+        print(f'Number: {phone_number}')
+        print(f'Relation: {relation}\n')
+
         return update_worksheet_contact(add_new_contact)
 
 
@@ -89,7 +110,6 @@ def update_worksheet_contact(add_new_contact):
     Updating the google sheet with new contact informaion in contactbook.
     Provides a validation message for user that the update is done.
     """
-    print("Saving contact in contactbook...\n")
     new_worksheet = SHEET.worksheet('contacts')
     new_worksheet.append_row([x for x in add_new_contact.values()])
     print("Contact is now saved and contactbook is updated! \n")
