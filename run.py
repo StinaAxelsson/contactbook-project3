@@ -41,11 +41,21 @@ def start():
 
         user_input = input("Please enter the number of the task here: \n")     
         if user_input == '1':
+            print("Thank you BYE")
             break
-        else:
-            print("not valid")
+        elif user_input == '2':
+            create_new_contact()
+        elif user_input == '3':
+            print("Not valid")
 
-    return user_input
+
+def create_new_contact():
+    first_name = input("First name: \n")
+    last_name = input("Last name: \n")
+    phone_number = input("Phone number: \n")
+    email = input("E-Mail: \n")
+
+    print(f'{first_name} {last_name}, {phone_number}, {email} is now added in your contact book!\n')
 
 
 def main():
@@ -53,6 +63,7 @@ def main():
     contains alla the functions for the program
     """
     start()
+    create_new_contact()
 
 
 print("-------------------------------------------------------")
