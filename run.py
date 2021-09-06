@@ -28,84 +28,41 @@ def start():
     """
     Start menu that the user can choose between 6 different tasks.
     """
+    print("""
+                --------MENU--------
+                1. Add new contact\n\
+                2. View all contacts\n\
+                3. Delete a contact\n\
+                4. Search contact\n\
+                5. Reset contactbook\n\
+                4. Exit\n
+                    """)
     while True:
-        print("MENU")
-        print("1. Add new contact")
-        print("2. View all contacts")
-        print("3. Delete a contact")
-        print("4. Search contact")
-        print("5. Reset contactbook")
-        print("4. Exit\n")
-
-        user_input = input("Please enter the number of the task here: \n")
-
-        if validate_menu_choise(user_input):
+        choise = int(input("Choose the number of the task you want to do: "))
+        if choise == 1:
+            print("go to add contact")
+            add_new_contact()
             break
-    add_new_contact(user_input)
-    show_all_contacts(user_input)
+        elif choise == 2:
+            print("you chose 2")
+        elif choise == 3:
+            print("you chose 3")
+        elif choise == 4:
+            print("you chose 4")
+        elif choise == 5:
+            print("You chose 5")
+        elif choise == 6:
+            print("You exit")
+        else:
+            print("Not a valid please enter a number 1-6")
 
 
-def validate_menu_choise(task_number):
-    """
-    Check so the user input is a number between 1-6 for the menu,
-    and provide an error messege if its not!
-    """
-    try:
-        if(int(task_number) < 1 or int(task_number) > 6):
-            raise ValueError(f'{task_number} is not a valid number')
-    except ValueError as e:
-        print(f'Try again, {e} enter a number between 1-6')
-        return False
-
-    return True
-
-
-def add_new_contact(task_number):
+def add_new_contact():
     """
     Add a new contact with first name, last name, phone number and email
     and check so the user input is correct, otherwise a error shows.
     """
-    if task_number == "1":
-        add_new_contact = {}
-
-        while True:
-            first_name = input("First Name: \n")
-            if not first_name.isalpha():
-                print("Please enter First Name with letters a-z")
-            else:
-                break
-        add_new_contact["Fname"] = first_name
-
-        while True:
-            last_name = input("Last Name: \n")
-            if not last_name.isalpha():
-                print("Please enter Last Name with letters a-z")
-            else:
-                break
-        add_new_contact["Lname"] = last_name
-
-        while True:
-            phone_number = int(input("Phone Number: \n"))
-            if not phone_number.__int__():
-                print("Please use digits only\n")
-            else:
-                break
-        add_new_contact["Number"] = phone_number
-
-        while True:
-            relation = input("Relation: \n")
-            if not relation.isalpha():
-                print("Please only use letters a-z, no space\n")
-            else:
-                break
-        add_new_contact["Relation"] = relation
-
-        print("You have added:\n")
-        print(f"Name: {first_name.upper()} {last_name.upper()}")
-        print(f'Number: {phone_number}')
-        print(f'Relation: {relation}\n')
-
-        return update_worksheet_contact(add_new_contact)
+    print("add new contact is chosen")    
 
 
 def update_worksheet_contact(add_new_contact):
@@ -117,19 +74,15 @@ def update_worksheet_contact(add_new_contact):
     new_worksheet.append_row([x for x in add_new_contact.values()])
     print("Contact is now saved and contactbook is updated! \n")
     start()
-    
 
-#not working
+
+# not working
 def show_all_contacts(task_number):
     """
     Open a list with all the existing contacts in the 
     contactbook from google sheet.
     """
-    if task_number == 2:
-        all_contacts = SHEET.worksheet('contacts').get_all_values()
-        print(all_contacts)
-    else:
-        print("Your contactbook is empty")
+    pass
 
 
 def main():
