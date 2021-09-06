@@ -1,7 +1,8 @@
-# start - a welcome message and a menu with 6 different task to choose between
+# start a welcome message and -
+# -a menu with 6 different task to choose between (check)
 # a while loop while user use the program (check)
 # funtions for every task in the menu
-# validating function so the user input the right value (check)
+# validating functions so the user input the right value
 # add contact + update sheet (check)
 # search for existing contact (by name, number or relaton (email))
 # delete a contact
@@ -53,6 +54,7 @@ def start():
             print("You chose 5")
         elif choise == 6:
             print("You exit")
+            break
         else:
             print("Not a valid please enter a number 1-6")
 
@@ -62,7 +64,47 @@ def add_new_contact():
     Add a new contact with first name, last name, phone number and email
     and check so the user input is correct, otherwise a error shows.
     """
-    print("add new contact is chosen")    
+    print("add new contact is chosen")
+    add_new_contact = {}
+
+    while True:
+        first_name = input("First Name: \n")
+        if not first_name.isalpha():
+            print("Please enter First Name with letters a-z")
+        else:
+            break
+    add_new_contact["Fname"] = first_name
+
+    while True:
+        last_name = input("Last Name: \n")
+        if not last_name.isalpha():
+            print("Please enter Last Name with letters a-z")
+        else:
+            break
+    add_new_contact["Lname"] = last_name
+
+    while True:
+        phone_number = int(input("Phone Number: \n"))
+        if not phone_number.__int__():
+            print("Please use digits only\n")
+        else:
+            break
+    add_new_contact["Number"] = phone_number
+
+    while True:
+        relation = input("Relation: \n")
+        if not relation.isalpha():
+            print("Please only use letters a-z, no space\n")
+        else:
+            break
+    add_new_contact["Relation"] = relation
+
+    print("You have added:\n")
+    print(f"Name: {first_name.upper()} {last_name.upper()}")
+    print(f'Number: {phone_number}')
+    print(f'Relation: {relation}\n')
+
+    return update_worksheet_contact(add_new_contact)    
 
 
 def update_worksheet_contact(add_new_contact):
