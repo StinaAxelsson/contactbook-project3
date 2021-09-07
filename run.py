@@ -91,7 +91,7 @@ def add_new_contact():
     add_new_contact["Lname"] = last_name
 
     while True:
-        # To valid phone number using help from 
+        # To valid phone number using help from
         # https://www.sololearn.com/Discuss/2588446/solved-python-phone-number-validator
         phone_number = input("Phone Number: \n")
         pattern = r"^[189][0-9]"
@@ -100,7 +100,8 @@ def add_new_contact():
             print("valid")
             break
         else:
-            print("Inavalid, please start number with 1, 8 or 9 and be 8 digits long")
+            print("Inavalid, please start number with 1, 8 or 9\
+                and be 8 digits long")
             continue
     add_new_contact["Number"] = phone_number
 
@@ -197,7 +198,7 @@ def exit_programme():
     print("-------------------------------------------------------")
     print("------------------------GOODBYE------------------------")
     print("-------------------------------------------------------")
-    
+
 
 def main():
     """
