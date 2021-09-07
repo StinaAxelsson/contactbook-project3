@@ -90,11 +90,17 @@ def add_new_contact():
     add_new_contact["Lname"] = last_name
 
     while True:
-        phone_number = int(input("Phone Number: \n"))
-        if not phone_number.__int__():
-            print("Please use digits only\n")
-        else:
+        # To valid phone number using help from 
+        # https://www.sololearn.com/Discuss/2588446/solved-python-phone-number-validator
+        phone_number = input("Phone Number: \n")
+        pattern = r"^[189][0-9]"
+        match = re.match(pattern, phone_number)
+        if match and len(phone_number) == 8:
+            print("valid")
             break
+        else:
+            print("Inavalid, please start number with 1, 8 or 9 and be 8 digits long")
+            continue
     add_new_contact["Number"] = phone_number
 
     while True:
@@ -116,6 +122,8 @@ def add_new_contact():
 def validate_email_input(email):
     """
     check if the input email is validate
+    using help from this site:
+    https://www.geeksforgeeks.org/check-if-email-address-valid-or-not-in-python/
     """
     regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
 
@@ -124,6 +132,13 @@ def validate_email_input(email):
     else:
         print("E-Mail is invalid, please try again")
         return False
+
+
+def validate_phone_number(number):
+    """
+    Check if the input phone number is validate,
+    checks so the number start with
+    """
 
 
 def update_worksheet_contact(add_new_contact):
