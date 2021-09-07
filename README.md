@@ -29,3 +29,9 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 
 -----
 Happy coding!
+
+
+Credits:
+https://stackoverflow.com/questions/45175995/gspread-reading-a-google-sheet-file-using-python-3 
+This is for the opening of the gspred showing all contacts
+
