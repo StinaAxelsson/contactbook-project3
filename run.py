@@ -45,7 +45,9 @@ def start():
             add_new_contact()
             break
         elif choise == 2:
-            print("you chose 2")
+            print("Open Contact Book...")
+            show_all_contacts()
+            break
         elif choise == 3:
             print("you chose 3")
         elif choise == 4:
@@ -56,7 +58,7 @@ def start():
             print("You exit")
             break
         else:
-            print("Not a valid please enter a number 1-6")
+            print("Not a valid input please enter a number 1-6")
 
 
 def add_new_contact():
@@ -104,7 +106,7 @@ def add_new_contact():
     print(f'Number: {phone_number}')
     print(f'Relation: {relation}\n')
 
-    return update_worksheet_contact(add_new_contact)    
+    return update_worksheet_contact(add_new_contact)
 
 
 def update_worksheet_contact(add_new_contact):
@@ -118,13 +120,19 @@ def update_worksheet_contact(add_new_contact):
     start()
 
 
-# not working
-def show_all_contacts(task_number):
+def show_all_contacts():
     """
     Open a list with all the existing contacts in the 
     contactbook from google sheet.
     """
-    pass
+    print("ALL CONTACTS:\n")
+    contact_list = SHEET.worksheet('contacts')
+    open_cnt_list = list()
+
+    for all in range(1, 5):
+        open_cnt_list = contact_list.col_values(all)
+        print(open_cnt_list)
+    start()
 
 
 def main():
