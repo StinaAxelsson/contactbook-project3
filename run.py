@@ -59,7 +59,8 @@ def start():
             delete_all_contacts()
             break
         elif choise == 6:
-            print("You exit")
+            print("Exit programme...")
+            exit_programme()
             break
         else:
             print("Not a valid input please enter a number 1-6")
@@ -187,9 +188,20 @@ def delete_all_contacts():
     return start()
 
 
+def exit_programme():
+    """
+    Shutting down programme when user choose the exit task in menu
+    """
+    print("-------------------------------------------------------")
+    print("-------------Thank you for using contact app-----------")
+    print("-------------------------------------------------------")
+    print("------------------------GOODBYE------------------------")
+    print("-------------------------------------------------------")
+    
+
 def main():
     """
-    contains alla the functions for the program
+    contains all the functions for the program
     """
     start()
 
