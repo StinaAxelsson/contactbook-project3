@@ -39,7 +39,7 @@ def start():
                 4. Exit\n
                     """)
     while True:
-        choise = int(input("Choose the number of the task you want to do: "))
+        choise = int(input("Choose the number of the task you want to do: \n"))
         if choise == 1:
             print("go to add contact")
             add_new_contact()
@@ -73,7 +73,7 @@ def add_new_contact():
 
     while True:
         first_name = input("First Name: \n")
-        if not first_name.isalpha():
+        if not first_name.capitalize():
             print("Please enter First Name with letters a-z")
         else:
             break
@@ -81,7 +81,7 @@ def add_new_contact():
 
     while True:
         last_name = input("Last Name: \n")
-        if not last_name.isalpha():
+        if not last_name.capitalize():
             print("Please enter Last Name with letters a-z")
         else:
             break
@@ -124,7 +124,7 @@ def update_worksheet_contact(add_new_contact):
 
 def show_all_contacts():
     """
-    Open a list with all the existing contacts in the 
+    Open a list with all the existing contacts in the
     contactbook from google sheet.
     """
     print("ALL CONTACTS:\n")
@@ -165,8 +165,9 @@ def main():
 
 
 print("-------------------------------------------------------")
-print("------------------------WELCOME!-----------------------")
+print("-----------------------WELCOME!------------------------")
 print("---------------This is a contact book app--------------")
-print("------Please choose what you want to do in the menu----")
+print("-------------Please choose a number of what------------")
+print("---------------you want to do in the menu--------------")
 print("-------------------------------------------------------\n")
 main()
