@@ -7,7 +7,7 @@
 # search for existing contact (by name, number or relaton (email))
 # delete a contact
 # Show all the existing contacts with a linebreak after every contact
-# Delete all the contats in the book
+# Delete all the contats in the book (check(have to fix it))
 # Exit to break the program from anywhere the user is
 
 import gspread
@@ -53,7 +53,9 @@ def start():
         elif choise == 4:
             print("you chose 4")
         elif choise == 5:
-            print("You chose 5")
+            print("Reset contact book")
+            delete_all_contacts()
+            break
         elif choise == 6:
             print("You exit")
             break
@@ -133,6 +135,26 @@ def show_all_contacts():
         open_cnt_list = contact_list.col_values(all)
         print(open_cnt_list)
     start()
+
+
+def delete_all_contacts():
+    """
+    Deleting all the existing contacts that been saved in
+    the contact - worksheet.
+    """
+    while True:
+        delete_all = input("Delete alla existing contacts? Y/N: \n")
+        if delete_all == "Y" or delete_all == "y":
+            SHEET.worksheet('contacts').clear()
+            print("All contacts have been deleted!")
+            break
+        elif delete_all == "N" or delete_all == "n":
+            print("NO, go back to menu")
+            start()
+            break
+        else:
+            print("Not Valid input, You have to enter Y or N, Try again")
+    return start()
 
 
 def main():
