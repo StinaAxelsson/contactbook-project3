@@ -9,8 +9,10 @@
 # Show all the existing contacts with a linebreak after every contact
 # Delete all the contats in the book (check(have to fix it))
 # Exit to break the program from anywhere the user is
+# import libraby that make color of the feedbacks in code
 
 import gspread
+import re
 from google.oauth2.service_account import Credentials
 
 SCOPE = [
@@ -36,7 +38,7 @@ def start():
                 3. Delete a contact\n\
                 4. Search contact\n\
                 5. Reset contactbook\n\
-                4. Exit\n
+                6. Exit\n
                     """)
     while True:
         choise = int(input("Choose the number of the task you want to do: \n"))
@@ -96,19 +98,32 @@ def add_new_contact():
     add_new_contact["Number"] = phone_number
 
     while True:
-        relation = input("Relation: \n")
-        if not relation.isalpha():
-            print("Please only use letters a-z, no space\n")
-        else:
+        email = input("E-Mail: \n")
+        if validate_email_input(email):
             break
-    add_new_contact["Relation"] = relation
+        else:
+            continue
+    add_new_contact["E-Mail"] = email
 
     print("You have added:\n")
     print(f"Name: {first_name.upper()} {last_name.upper()}")
     print(f'Number: {phone_number}')
-    print(f'Relation: {relation}\n')
+    print(f'E-Mail: {email}\n')
 
     return update_worksheet_contact(add_new_contact)
+
+
+def validate_email_input(email):
+    """
+    check if the input email is validate
+    """
+    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+
+    if(re.fullmatch(regex, email)):
+        return True
+    else:
+        print("E-Mail is invalid, please try again")
+        return False
 
 
 def update_worksheet_contact(add_new_contact):
