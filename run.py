@@ -113,10 +113,13 @@ def add_new_contact():
             continue
     add_new_contact["E-Mail"] = email
 
-    print("You have added:\n")
+    print("-----------------------------------")
+    print("ADDED:\n")
     print(f"Name: {first_name.upper()} {last_name.upper()}")
     print(f'Number: {phone_number}')
     print(f'E-Mail: {email}\n')
+    print("-----------------------------------")
+    add_one_more()
 
     return update_worksheet_contact(add_new_contact)
 
@@ -151,6 +154,24 @@ def back_to_menu():
             break
         else:
             print("Unvalid input please enter B for back or Q for quit")
+        return False
+
+
+def add_one_more():
+    """
+    if user want to add more contacts in a row, this is a short way to do that
+    instead of get to start menu after adding a contact.
+    """
+    while True:
+        again = input("Do you want to add a new contact again? Y/N: \n")
+        if again == "Y" or again == "y":
+            add_new_contact()
+            break
+        elif again == "N" or again == "n":
+            start()
+            break
+        else:
+            print("Invalid input, please enter Y(yes) or N(no")
         return False
 
 
