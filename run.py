@@ -161,7 +161,7 @@ def update_worksheet_contact(add_new_contact):
     new_worksheet = SHEET.worksheet('contacts')
     new_worksheet.append_row([x for x in add_new_contact.values()])
     print("Contact is now saved and contactbook is updated! \n")
-    back_to_menu()
+    start()
 
 
 def show_all_contacts():
@@ -174,7 +174,7 @@ def show_all_contacts():
     open_cnt_list = list()
 
     for all in range(1, 5):
-        open_cnt_list = contact_list.col_values(all)
+        open_cnt_list = contact_list.row_values(all)
         print(open_cnt_list)
     start()
 
