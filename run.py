@@ -25,6 +25,7 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('contact_book')
+CONTACTS = SHEET.worksheet('contacts')
 
 
 def start():
@@ -47,7 +48,7 @@ def start():
             add_new_contact()
             break
         elif choise == '2':
-            print("Open Contact Book...")
+            print("Open Contact Book...\n")
             show_all_contacts()
             break
         elif choise == '3':
@@ -79,7 +80,7 @@ def add_new_contact():
             print("Please enter First Name with letters a-z")
         else:
             break
-    add_new_contact["Fname"] = first_name
+    add_new_contact["FIRST NAME"] = first_name
 
     while True:
         last_name = input("Last Name: \n")
@@ -166,17 +167,28 @@ def update_worksheet_contact(add_new_contact):
 
 def show_all_contacts():
     """
-    Open a list with all the existing contacts in the
-    contactbook from google sheet.
+    Function to get all the contacts from google sheet
+    and show them as a list for each person in the
+    contact book
     """
-    print("ALL CONTACTS:\n")
-    contact_list = SHEET.worksheet('contacts')
-    open_cnt_list = []
+    get_all = CONTACTS.get_all_records()
+    for contact in get_all:
+        show_all_contacts_loop(contact)
+    back_to_menu()
 
-    for all in range(1, 5):
-        open_cnt_list = contact_list.row_values(all)
-        print(open_cnt_list)
-    start()
+
+def show_all_contacts_loop(existing):
+    """
+    Function that takes all the existing contacts from worksheet
+    and make it a loop with the headers as keys and the contact
+    information as value in a list for each contact.
+    """
+    one_contact = []
+    for key, value in existing.items():
+        print(f'{key}: {value}')
+        one_contact.append(value)
+    print("-----------------------------------")
+    return one_contact
 
 
 def delete_all_contacts():
@@ -187,7 +199,7 @@ def delete_all_contacts():
     while True:
         delete_all = input("Delete alla existing contacts? Y/N: \n")
         if delete_all == "Y" or delete_all == "y":
-            SHEET.worksheet('contacts').clear()
+            pass
             print("All contacts have been deleted!")
             break
         elif delete_all == "N" or delete_all == "n":
