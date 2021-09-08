@@ -41,24 +41,24 @@ def start():
                 6. Exit\n
                     """)
     while True:
-        choise = int(input("Choose the number of the task you want to do: \n"))
-        if choise == 1:
+        choise = (input("Choose the number of the task you want to do: \n"))
+        if choise == '1':
             print("go to add contact")
             add_new_contact()
             break
-        elif choise == 2:
+        elif choise == '2':
             print("Open Contact Book...")
             show_all_contacts()
             break
-        elif choise == 3:
+        elif choise == '3':
             print("you chose 3")
-        elif choise == 4:
+        elif choise == '4':
             print("you chose 4")
-        elif choise == 5:
+        elif choise == '5':
             print("Reset contact book")
             delete_all_contacts()
             break
-        elif choise == 6:
+        elif choise == '6':
             print("Exit programme...")
             exit_programme()
             break
@@ -71,7 +71,6 @@ def add_new_contact():
     Add a new contact with first name, last name, phone number and email
     and check so the user input is correct, otherwise a error shows.
     """
-    print("add new contact is chosen")
     add_new_contact = {}
 
     while True:
@@ -136,11 +135,22 @@ def validate_email_input(email):
         return False
 
 
-def validate_phone_number(number):
+def back_to_menu():
     """
-    Check if the input phone number is validate,
-    checks so the number start with
+    Instead of get the whole menu after every task, user get a question if
+    they want to go back to menu or quit.
     """
+    while True:
+        user_choise = input("Back to menu: B, Quit programme: Q \n")
+        if user_choise == "B" or user_choise == "b":
+            start()
+            break
+        elif user_choise == "Q" or user_choise == "q":
+            exit_programme()
+            break
+        else:
+            print("Unvalid input please enter B for back or Q for quit")
+        return False
 
 
 def update_worksheet_contact(add_new_contact):
@@ -151,7 +161,7 @@ def update_worksheet_contact(add_new_contact):
     new_worksheet = SHEET.worksheet('contacts')
     new_worksheet.append_row([x for x in add_new_contact.values()])
     print("Contact is now saved and contactbook is updated! \n")
-    start()
+    back_to_menu()
 
 
 def show_all_contacts():
