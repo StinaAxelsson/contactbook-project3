@@ -171,7 +171,7 @@ def show_all_contacts():
     """
     print("ALL CONTACTS:\n")
     contact_list = SHEET.worksheet('contacts')
-    open_cnt_list = list()
+    open_cnt_list = []
 
     for all in range(1, 5):
         open_cnt_list = contact_list.row_values(all)
