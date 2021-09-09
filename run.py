@@ -208,7 +208,6 @@ def printing_all_contacts(existing):
     one_contact = []
     for title, info in existing.items():
         print(f'{title}: {info}')
-        one_contact.append(info)
     print("-----------------------------------")
     return one_contact
 
@@ -228,9 +227,9 @@ def search_contact():
     while True:
         search_input = input("Please enter a number 1-5: \n")
         if search_input == '1':
-            get_from_search('fname')  # make a new function
+            get_from_search('First Name')  # make a new function
         elif search_input == '2':
-            get_from_search('lname')  # make a new function
+            get_from_search('Last Name')  # make a new function
         elif search_input == '3':
             print("here goes a input")  # make a new function
         elif search_input == '4':
@@ -248,24 +247,16 @@ def get_from_search(find_search):
     that user is searching after from name, number of email
     and the function looking for it in the contact worksheet.
     """
-    if find_search == 'fname':
+    object = 
+    if find_search == 'First Name':
         find = input('First Name: \n').capitalize()
-    elif find_search == 'lname':
+        CONTACTS.range("A2:A{}".format())
+
+    elif find_search == 'Last Name':
         find = input('Last Name: \n').capitalize()
     else:
         print("print something")
-
-    output = list(filter(
-        lambda existing: existing[find_search] == find or
-        find in existing[find_search], CONTACTS.get_all_records()
-    ))
-    if len(output) != 0:
-        for existing in output:
-            printing_all_contacts(existing)
-        back_to_menu()
-    else:
-        print("There is no contact with that name, Try again")
-        search_contact()
+        find = CONTACTS.find('First Name')
 
 
 # EXIT PROGRAMME
