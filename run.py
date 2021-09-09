@@ -55,6 +55,8 @@ def start():
             print("you chose 3")
         elif choise == '4':
             print("you chose 4")
+            search_contact()
+            break
         elif choise == '5':
             print("Reset contact book")
             delete_all_contacts()
@@ -185,13 +187,17 @@ def update_worksheet_contact(add_new_contact):
     add_one_more()
 
 
+def open_worksheet():
+    return CONTACTS.get_all_records()
+
+
 def show_all_contacts():
     """
     Function to get all the contacts from google sheet
     and show them as a list for each person in the
     contact book
     """
-    get_all = CONTACTS.get_all_records()
+    get_all = open_worksheet()
     for contact in get_all:
         show_all_contacts_loop(contact)
     back_to_menu()
@@ -211,7 +217,36 @@ def show_all_contacts_loop(existing):
     return one_contact
 
 
-def delete_all_contacts():
+# Not working yet
+def search_contact():
+    """
+    Search function with a menu for the user to enter what
+    they want to search for in contact book.
+    """
+    print("SEARCH:")
+    print("1. First Name")
+    print("2. Last Name")
+    print("3. Phone Number")
+    print("4. E-Mail")
+    print("5. Back to Menu")
+    while True:
+        search_input = input("Please enter a number 1-5: \n")
+        if search_input == '1':
+            print("here goes a input")  # make a new function
+        elif search_input == '2':
+            print("here goes a input")  # make a new function
+        elif search_input == '3':
+            print("here goes a input")  # make a new function
+        elif search_input == '4':
+            print("here goes a input")  # make a new function
+        elif search_input == '5':
+            print("here goes a input")  # make a new function
+        else:
+            back_to_menu()
+        return False
+
+
+def delete_all_contacts():  #Not working
     """
     Deleting all the existing contacts that been saved in
     the contact - worksheet.
