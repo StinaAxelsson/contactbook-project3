@@ -59,7 +59,6 @@ def start():
             break
         elif choise == '5':
             print("Reset contact book")
-            delete_all_contacts()
             break
         elif choise == '6':
             print("Exit programme...")
@@ -187,6 +186,7 @@ def update_worksheet_contact(add_new_contact):
     add_one_more()
 
 
+# SHOW ALL EXISTING CONTACTS
 def show_all_contacts():
     """
     Function to get all the contacts from google sheet
@@ -195,25 +195,25 @@ def show_all_contacts():
     """
     get_all = CONTACTS.get_all_records()
     for contact in get_all:
-        show_all_contacts_loop(contact)
+        printing_all_contacts(contact)
     back_to_menu()
 
 
-def show_all_contacts_loop(existing):
+def printing_all_contacts(existing):
     """
     Function that takes all the existing contacts from worksheet
     and make it a loop with the headers as keys and the contact
     information as value in a list for each contact.
     """
     one_contact = []
-    for key, value in existing.items():
-        print(f'{key}: {value}')
-        one_contact.append(value)
+    for title, info in existing.items():
+        print(f'{title}: {info}')
+        one_contact.append(info)
     print("-----------------------------------")
     return one_contact
 
 
-# Not working yet
+# SEARCH CONTACTS
 def search_contact():
     """
     Search function with a menu for the user to enter what
@@ -228,9 +228,9 @@ def search_contact():
     while True:
         search_input = input("Please enter a number 1-5: \n")
         if search_input == '1':
-            print("here goes a input")  # make a new function
+            get_from_search('fname')  # make a new function
         elif search_input == '2':
-            print("here goes a input")  # make a new function
+            get_from_search('lname')  # make a new function
         elif search_input == '3':
             print("here goes a input")  # make a new function
         elif search_input == '4':
@@ -242,26 +242,33 @@ def search_contact():
         return False
 
 
-def delete_all_contacts():  # Not working
+def get_from_search(find_search):
     """
-    Deleting all the existing contacts that been saved in
-    the contact - worksheet.
+    Get input from user in search task, to find the contacts
+    that user is searching after from name, number of email
+    and the function looking for it in the contact worksheet.
     """
-    while True:
-        delete_all = input("Delete alla existing contacts? Y/N: \n")
-        if delete_all == "Y" or delete_all == "y":
-            pass
-            print("All contacts have been deleted!")
-            break
-        elif delete_all == "N" or delete_all == "n":
-            print("NO, go back to menu")
-            start()
-            break
-        else:
-            print("Not Valid input, You have to enter Y or N, Try again")
-    return start()
+    if find_search == 'fname':
+        find = input('First Name: \n').capitalize()
+    elif find_search == 'lname':
+        find = input('Last Name: \n').capitalize()
+    else:
+        print("print something")
+
+    output = list(filter(
+        lambda existing: existing[find_search] == find or
+        find in existing[find_search], CONTACTS.get_all_records()
+    ))
+    if len(output) != 0:
+        for existing in output:
+            printing_all_contacts(existing)
+        back_to_menu()
+    else:
+        print("There is no contact with that name, Try again")
+        search_contact()
 
 
+# EXIT PROGRAMME
 def exit_programme():
     """
     Shutting down programme when user choose the exit task in menu
