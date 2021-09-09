@@ -187,17 +187,13 @@ def update_worksheet_contact(add_new_contact):
     add_one_more()
 
 
-def open_worksheet():
-    return CONTACTS.get_all_records()
-
-
 def show_all_contacts():
     """
     Function to get all the contacts from google sheet
     and show them as a list for each person in the
     contact book
     """
-    get_all = open_worksheet()
+    get_all = CONTACTS.get_all_records()
     for contact in get_all:
         show_all_contacts_loop(contact)
     back_to_menu()
@@ -246,7 +242,7 @@ def search_contact():
         return False
 
 
-def delete_all_contacts():  #Not working
+def delete_all_contacts():  # Not working
     """
     Deleting all the existing contacts that been saved in
     the contact - worksheet.
