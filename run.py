@@ -247,18 +247,18 @@ def get_from_search(find_search):
     that user is searching after from name, number of email
     and the function looking for it in the contact worksheet.
     """
-    object = CONTACTS.find('')
-
+    x = CONTACTS.get_all_records()
     if find_search == 'First Name':
         find_object = input('First Name: \n').capitalize()
-        if find_object in object:
-            print("found" % object.row, object.col)
-        else:
-            print("nothing")
     elif find_search == 'Last Name':
         find_object = input('Last Name: \n').capitalize()
+        lambda find_object: x.search(find_object.value)
+        print(find_object)
     else:
         print("print something")
+    lambda find_object: x.search(find_object.value)
+
+# match = lambda x: query.search(x.value) - find it in terminal error message
 
 
 # EXIT PROGRAMME
