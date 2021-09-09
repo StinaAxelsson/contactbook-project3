@@ -247,16 +247,18 @@ def get_from_search(find_search):
     that user is searching after from name, number of email
     and the function looking for it in the contact worksheet.
     """
-    object = 
-    if find_search == 'First Name':
-        find = input('First Name: \n').capitalize()
-        CONTACTS.range("A2:A{}".format())
+    object = CONTACTS.find('')
 
+    if find_search == 'First Name':
+        find_object = input('First Name: \n').capitalize()
+        if find_object in object:
+            print("found" % object.row, object.col)
+        else:
+            print("nothing")
     elif find_search == 'Last Name':
-        find = input('Last Name: \n').capitalize()
+        find_object = input('Last Name: \n').capitalize()
     else:
         print("print something")
-        find = CONTACTS.find('First Name')
 
 
 # EXIT PROGRAMME
