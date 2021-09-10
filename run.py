@@ -247,21 +247,25 @@ def get_from_search(find_search):
     that user is searching after from name, number of email
     and the function looking for it in the contact worksheet.
     """
-    x = CONTACTS.get_all_records()
     if find_search == 'First Name':
         find_object = input('First Name: \n').capitalize()
+        find_loop('First Name')
     elif find_search == 'Last Name':
         find_object = input('Last Name: \n').capitalize()
-        lambda find_object: x.search(find_object.value)
-        print(find_object)
     else:
         print("print something")
-    lambda find_object: x.search(find_object.value)
-
-# match = lambda x: query.search(x.value) - find it in terminal error message
 
 
-# EXIT PROGRAMME
+def find_loop(column):
+    print("searching......")
+    CONTACTS.find(column)
+    match = []
+    for col in range(1, (2)):
+        val = CONTACTS.col_values(col)
+        match.append(val[1:])
+    return match
+
+
 def exit_programme():
     """
     Shutting down programme when user choose the exit task in menu
