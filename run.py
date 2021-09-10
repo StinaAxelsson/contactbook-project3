@@ -249,21 +249,28 @@ def get_from_search(find_search):
     """
     if find_search == 'First Name':
         find_object = input('First Name: \n').capitalize()
-        find_loop('First Name')
+        all_matches = find_loop('First Name', find_object)
+        print(all_matches)
     elif find_search == 'Last Name':
         find_object = input('Last Name: \n').capitalize()
     else:
         print("print something")
 
 
-def find_loop(column):
+def find_loop(column, value):
     print("searching......")
-    CONTACTS.find(column)
+    matches = CONTACTS.findall(value)
     match = []
-    for col in range(1, (2)):
-        val = CONTACTS.col_values(col)
-        match.append(val[1:])
-    return match
+    found_value = []
+    # for col in range(1, (2)):
+    #     val = CONTACTS.col_values(col)
+    #     print(val)
+    #     match.append(val[1:])
+    # for item in match:
+    #     print(item)
+    #     if item == value:
+    #         print('match')
+    return matches
 
 
 def exit_programme():
