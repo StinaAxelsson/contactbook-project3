@@ -259,18 +259,22 @@ def get_from_search(find_search):
 
 def find_loop(column, value):
     print("searching......")
-    matches = CONTACTS.findall(value)
+    cell = CONTACTS.findall(value)
+    # print(value.row)
+    val = CONTACTS.row_values(1)
+    print(val)
+
     match = []
     found_value = []
-    # for col in range(1, (2)):
-    #     val = CONTACTS.col_values(col)
+    # for row in range(2, 7):
+    #     val = CONTACTS.row_values(row)
     #     print(val)
     #     match.append(val[1:])
     # for item in match:
     #     print(item)
     #     if item == value:
     #         print('match')
-    return matches
+    return cell
 
 
 def exit_programme():
