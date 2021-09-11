@@ -249,15 +249,14 @@ def get_from_search(find_search):
     """
     if find_search == 'First Name':
         find_object = input('First Name: \n').capitalize()
-        all_matches = find_column('First Name', find_object)
-        print(all_matches)
-        right = find_row(find_object)
-        print(right)
+        fname = find_column('First Name', find_object)
+        search = fname
     elif find_search == 'Last Name':
         find_object = input('Last Name: \n').capitalize()
     else:
         print("print something")
-
+    print(search)
+    
 
 def find_column(column, value):
     print("searching......")
@@ -269,12 +268,12 @@ def find_column(column, value):
     #         print('match')
 
 
-def find_row(row):
-    val = CONTACTS.row_values(row)
-    rows = []
-    for row in val:
-        print(val)
-    return rows
+# def find_row(row):
+#     val = CONTACTS.row_values(row)
+#     rows = []
+#     for row in val:
+#         print(val)
+#     return rows
 
 
 def exit_programme():
