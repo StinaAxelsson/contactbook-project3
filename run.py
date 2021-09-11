@@ -100,7 +100,7 @@ def add_new_contact():
         if match and len(phone_number) <= 11:
             break
         else:
-            print("Inavalid, Not more than 11 digits"
+            print("Inavalid, Not more than 11 digits")
             continue
     add_new_contact["Number"] = phone_number
 
