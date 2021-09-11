@@ -95,14 +95,12 @@ def add_new_contact():
         # To valid phone number using help from
         # https://www.sololearn.com/Discuss/2588446/solved-python-phone-number-validator
         phone_number = input("Phone Number: \n")
-        pattern = r"^[189][0-9]"
+        pattern = r"^[0-9]"
         match = re.match(pattern, phone_number)
-        if match and len(phone_number) == 8:
-            print("valid")
+        if match and len(phone_number) <= 11:
             break
         else:
-            print("Inavalid, please start number with 1, 8 or 9\
-                and be 8 digits long")
+            print("Inavalid, Not more than 11 digits"
             continue
     add_new_contact["Number"] = phone_number
 
@@ -268,15 +266,6 @@ def find_column(column, value):
     #     print(item)
     #     if item == value:
     #         print('match')
-
-
-def find_row(column_match):
-    val = CONTACTS.row_values(column_match)
-
-    for row in val:
-        print(row)
-    return row
-
 
 # def find_match(value):
 #     all = CONTACTS.get_all_values()
