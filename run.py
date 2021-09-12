@@ -265,11 +265,14 @@ def get_from_search(find_search):
     else:
         print("print something")
 
-    for x in (search):
-        row_number = x.row
+    for row_value in (search):
+        row_number = row_value.row
         value_list = CONTACTS.row_values(row_number)
-        if len(value_list) != 0:
-            print(value_list)
+        listToStr = ' '.join([str(elem) for elem in value_list])
+        if len(listToStr) != 0:
+            print("------------------------------------------")
+            print(listToStr)
+            print("------------------------------------------")
         else:
             print("Contact not found")
             search_contact()
@@ -281,7 +284,7 @@ def find_column(column, value):
     Get the cell rownumber and column number of the
     object that the user search for
     """
-    print("searching......")
+    print("searching......\n")
     column_match = CONTACTS.findall(value)
 
     return column_match
