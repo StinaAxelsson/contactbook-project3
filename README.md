@@ -28,4 +28,5 @@ In this contact book programme, you can add new contacts and save it in a google
 Credits:
 https://stackoverflow.com/questions/45175995/gspread-reading-a-google-sheet-file-using-python-3 
 This is for the opening of the gspred showing all contacts
+https://www.geeksforgeeks.org/python-program-to-convert-a-list-to-string/ - for fix the list to just strings in search function using join() method
 
