@@ -259,34 +259,19 @@ def get_from_search(find_search):
     for x in (search):
         row_number = x.row
         value_list = CONTACTS.row_values(row_number)
-    while True:
-        if value_list == "":
-            print("contact not found")
-        else:
-            print(value_list)
-            back_to_menu()
-    return False
+        print(value_list)
+        return value_list
 
 
 def find_column(column, value):
+    """
+    Get the cell rownumber and column number of the
+    object that the user search for
+    """
     print("searching......")
     column_match = CONTACTS.findall(value)
 
     return column_match
-    # for item in match:
-    #     print(item)
-    #     if item == value:
-    #         print('match')
-
-# def find_match(value):
-#     all = CONTACTS.get_all_values()
-#     all_row = all[value]
-
-#     result = []
-#     for all, i in zip(all_row, value):
-#         result.append(i)
-
-#     return data
 
 
 def exit_programme():
