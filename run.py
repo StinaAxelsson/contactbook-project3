@@ -1,15 +1,15 @@
 # start a welcome message and -
-# -a menu with 6 different task to choose between (check)
-# a while loop while user use the program (check)
-# funtions for every task in the menu
-# validating functions so the user input the right value
-# add contact + update sheet (check)
-# search for existing contact (by name, number or relaton (email))
-# delete a contact
-# Show all the existing contacts with a linebreak after every contact
-# Delete all the contats in the book (check(have to fix it))
-# Exit to break the program from anywhere the user is
-# import libraby that make color of the feedbacks in code
+# [X]-a menu with 6 different task to choose between
+# [X]a while loop while user use the program
+# []funtions for every task in the menu
+# [X]validating functions so the user input the right value
+# [X]add contact + update sheet
+# [X]search for existing contact (by name, number or email)
+# []delete a contact
+# [X]Show all the existing contacts with a linebreak after every contact
+# []Delete all the contats in the book (check(have to fix it))
+# [X]Exit to break the program from anywhere the user is
+# []import libraby that make color of the feedbacks in code
 
 import gspread
 import re
@@ -152,6 +152,7 @@ def back_to_menu():
             break
         else:
             print("Invalid input, Try again")
+            back_to_menu()
         return False
 
 
@@ -170,6 +171,7 @@ def add_one_more():
             break
         else:
             print("Invalid input, Try again")
+            add_one_more()
         return False
 
 
@@ -269,6 +271,7 @@ def get_from_search(find_search):
             print(value_list)
         else:
             print("Contact not found")
+            search_contact()
     back_to_menu()
 
 
