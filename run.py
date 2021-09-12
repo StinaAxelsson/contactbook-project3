@@ -44,7 +44,7 @@ def start():
     while True:
         choise = (input("Choose the number of the task you want to do: \n"))
         if choise == '1':
-            print("go to add contact")
+            print("Go to add contact")
             add_new_contact()
             break
         elif choise == '2':
@@ -54,7 +54,7 @@ def start():
         elif choise == '3':
             print("you chose 3")
         elif choise == '4':
-            print("you chose 4")
+            print("Open search menu...\n")
             search_contact()
             break
         elif choise == '5':
@@ -216,12 +216,12 @@ def search_contact():
     Search function with a menu for the user to enter what
     they want to search for in contact book.
     """
-    print("SEARCH:")
+    print("----SEARCH:----")
     print("1. First Name")
     print("2. Last Name")
     print("3. Phone Number")
     print("4. E-Mail")
-    print("5. Back to Menu")
+    print("5. Back to Menu\n")
     while True:
         search_input = input("Please enter a number 1-5: \n")
         if search_input == '1':
@@ -229,13 +229,11 @@ def search_contact():
         elif search_input == '2':
             get_from_search('Last Name')  # make a new function
         elif search_input == '3':
-            print("here goes a input")  # make a new function
+            get_from_search('Phone Number')  # make a new function
         elif search_input == '4':
-            print("here goes a input")  # make a new function
-        elif search_input == '5':
-            print("here goes a input")  # make a new function
+            get_from_search('E-Mail')  # make a new function
         else:
-            back_to_menu()
+            start()
         return False
 
 
@@ -253,13 +251,25 @@ def get_from_search(find_search):
         find_object = input('Last Name: \n')
         lname = find_column('First Name', find_object)
         search = lname
+    elif find_search == 'Phone Number':
+        find_object = input('Phone Number: \n')
+        number = find_column('Phone Number', find_object)
+        search = number
+    elif find_search == 'E-Mail':
+        find_object = input('E-Mail: \n')
+        mail = find_column('E-Mail', find_object)
+        search = mail
     else:
         print("print something")
 
     for x in (search):
         row_number = x.row
         value_list = CONTACTS.row_values(row_number)
-        print(value_list)
+        if len(value_list) != 0:
+            print(value_list)
+        else:
+            print("Contact not found")
+    back_to_menu()
 
 
 def find_column(column, value):
