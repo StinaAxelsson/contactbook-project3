@@ -260,7 +260,6 @@ def get_from_search(find_search):
         row_number = x.row
         value_list = CONTACTS.row_values(row_number)
         print(value_list)
-        return value_list
 
 
 def find_column(column, value):
