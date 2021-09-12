@@ -59,6 +59,7 @@ def start():
             break
         elif choise == '5':
             print("Reset contact book")
+            reset_contactbook()
             break
         elif choise == '6':
             print("Exit programme...")
@@ -284,6 +285,11 @@ def find_column(column, value):
     column_match = CONTACTS.findall(value)
 
     return column_match
+
+
+def reset_contactbook():
+    print("delete all contacts")
+    return CONTACTS.clear()
 
 
 def exit_programme():

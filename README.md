@@ -1,35 +1,29 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![img](http)
 
-Welcome StinaAxelsson,
+# Contact book python application
+Author: Stina Axelsson
+print screen of project.
+# Project Description
+This project is developed as my third portfolio project during my course at Code Institute. It is a back-end appplication using Python programming langugae.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
-
+In this contact book programme, you can add new contacts and save it in a google sheet document. You can search for specific contacts that is saved, view all existing contacts and delete one or all. 
+# Content
+* Project Description
+* UX
+  * User Stories
+  * Site Owner Goals
+  * Structure
+* Features
+  * Existing Features
+  * Features Left To Implement
+* Technologies Used
+  * Languages
+  * Other Programmes
+* Testing
+  * Validator Testing
+* Deployment
+* Credits
+* Ackmowledgements
 
 Credits:
 https://stackoverflow.com/questions/45175995/gspread-reading-a-google-sheet-file-using-python-3 
