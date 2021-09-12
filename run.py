@@ -255,12 +255,23 @@ def get_from_search(find_search):
         search = lname
     else:
         print("print something")
-    print(search)
+
+    for x in (search):
+        row_number = x.row
+        value_list = CONTACTS.row_values(row_number)
+    while True:
+        if value_list == "":
+            print("contact not found")
+        else:
+            print(value_list)
+            back_to_menu()
+    return False
 
 
 def find_column(column, value):
     print("searching......")
     column_match = CONTACTS.findall(value)
+
     return column_match
     # for item in match:
     #     print(item)
