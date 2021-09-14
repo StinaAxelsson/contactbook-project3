@@ -1,11 +1,11 @@
 # start a welcome message and -
 # [X]-a menu with 6 different task to choose between
 # [X]a while loop while user use the program
-# []funtions for every task in the menu
+# [X]funtions for every task in the menu
 # [X]validating functions so the user input the right value
 # [X]add contact + update sheet
 # [X]search for existing contact (by name, number or email)
-# []delete a contact
+# [X]delete a contact
 # [X]Show all the existing contacts with a linebreak after every contact
 # [X]Delete all the contats in the book (check(have to fix it))
 # [X]Exit to break the program from anywhere the user is
@@ -44,21 +44,22 @@ def start():
     while True:
         choise = (input("Choose the number of the task you want to do: \n"))
         if choise == '1':
-            print("Go to add contact")
+            print("Taking you to Go Add new contact...\n")
             add_new_contact()
             break
         elif choise == '2':
-            print("Open Contact Book...\n")
+            print("Taking you to Open Contact Book...\n")
             show_all_contacts()
             break
         elif choise == '3':
-            print("you chose 3")
+            print("Taking you to Delete a contact...\n")
+            delete_menu()
         elif choise == '4':
-            print("Open search menu...\n")
+            print("Taking you to Search menu...\n")
             search_contact()
             break
         elif choise == '5':
-            print("Reset contact book")
+            print("Taking you to Reset contact book...")
             validate_reset()
             break
         elif choise == '6':
@@ -280,23 +281,6 @@ def get_from_search(find_search):
     back_to_menu()
 
 
-def delete_one(contact):
-    delete = input("Do you want to delete this contact? Y/N: \n")
-    while True:
-        if delete == 'Y' or delete == 'y':
-            print("delte function here")
-            delete_row(contact)
-        else:
-            back_to_menu()
-        return False
-
-
-def delete_row(row):
-    deleted_contact = CONTACTS.delete_rows(row)
-    print("contact is now delted")
-    return deleted_contact
-
-
 def find_column(column, value):
     """
     Get the cell rownumber and column number of the
@@ -308,8 +292,44 @@ def find_column(column, value):
     return column_match
 
 
+# DELETE ONE CONTACT
+def delete_one(contact):
+    """
+    Validation for user before delete a contact
+    so its not is delting by mistake
+    """
+    delete = input("Do you want to delete this contact? Y/N: \n")
+    while True:
+        if delete == 'Y' or delete == 'y':
+            print("Deliting.....")
+            delete_row(contact)
+        else:
+            back_to_menu()
+            break
+        return False
+
+
+def delete_row(row):
+    """
+    This function delete the row of the specific contact that
+    user search for, from the worksheet.
+    """
+    deleted_contact = CONTACTS.delete_rows(row)
+    print("Contact is now deleted")
+    return deleted_contact
+
+
+def delete_menu():
+    print("You have to search for the contact you want to delete first\n")
+    return search_contact()
+
+
 # RESET ALL CONTACTS
 def reset_contactbook():
+    """
+    When user want to reset all contacts and delete the worksheet.
+    All values clear, but the headers/titles appear on the first row again.
+    """
     print("delete all contacts...\n")
     CONTACTS.clear()
     values = ("First name", "Last Name", "Phone Number", "E-Mail")
@@ -320,6 +340,10 @@ def reset_contactbook():
 
 
 def validate_reset():
+    """
+    Function for user to validate to reset the worksheet
+    so they dont do it by mistake
+    """
     reset = input("Are you sure you want to reset? Y/N: \n")
     while True:
         if reset == 'Y' or reset == 'y':
