@@ -2,6 +2,7 @@
 # Contact book python application
 Author: Stina Axelsson
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/responsive.png)
+
 # Project Description
 This project is developed as my third portfolio project during my course at Code Institute. It is a back-end appplication using Python programming langugae.
 
@@ -26,7 +27,19 @@ In this contact book programme, you can add new contacts and save it in a google
 
 # UX
 ## User Stories
+As a user I want...
+* ..that the programme is simple to understand and what it is about.
+* .. to get feedback of what is happening when navigate thru the programme/app.
+* .. to add contact, be able to see all my saved contacts and to delete one or all.
+* .. ways to get back to start or menu easy.
+* .. 
 ## Site Owner Goals
+As a developer of this programme, my goals was..
+* To build a programme that can store and add information from a user.
+* Make it easy for user to understand what it is about and how to use it.
+* To make functions that add and store user inputs in API google sheets.
+* Create functions like add a contact, open exisiting contacts and delete. 
+* Make 
 
 ## Structure
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/flowchart-contactbook.pdf)
