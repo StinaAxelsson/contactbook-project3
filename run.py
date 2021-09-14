@@ -263,7 +263,7 @@ def get_from_search(find_search):
         mail = find_column('E-Mail', find_object)
         search = mail
     else:
-        print("print something")
+        print("Not a valid input, Try again")
 
     for row_value in (search):
         row_number = row_value.row
@@ -273,10 +273,28 @@ def get_from_search(find_search):
             print("------------------------------------------")
             print(listToStr)
             print("------------------------------------------")
+            delete_one(row_number)
         else:
             print("Contact not found")
             search_contact()
     back_to_menu()
+
+
+def delete_one(contact):
+    delete = input("Do you want to delete this contact? Y/N: \n")
+    while True:
+        if delete == 'Y' or delete == 'y':
+            print("delte function here")
+            delete_row(contact)
+        else:
+            back_to_menu()
+        return False
+
+
+def delete_row(row):
+    deleted_contact = CONTACTS.delete_rows(row)
+    print("contact is now delted")
+    return deleted_contact
 
 
 def find_column(column, value):
