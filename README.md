@@ -1,4 +1,4 @@
-![](http)
+![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/responsive.png)
 
 # Contact book python application
 Author: Stina Axelsson
