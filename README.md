@@ -1,4 +1,4 @@
-![img](http)
+![](http)
 
 # Contact book python application
 Author: Stina Axelsson
