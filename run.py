@@ -59,7 +59,7 @@ def start():
             break
         elif choise == '5':
             print("Reset contact book")
-            reset_contactbook()
+            validate_reset()
             break
         elif choise == '6':
             print("Exit programme...")
@@ -291,8 +291,25 @@ def find_column(column, value):
 
 
 def reset_contactbook():
-    print("delete all contacts")
-    return CONTACTS.clear()
+    print("delete all contacts...\n")
+    CONTACTS.clear()
+    values = ("First name", "Last Name", "Phone Number", "E-Mail")
+    new_sheet = CONTACTS.append_row(values)
+    print("Phone Book is now reset")
+    back_to_menu()
+    return new_sheet
+
+
+def validate_reset():
+    reset = input("Are you sure you want to reset? Y/N: \n")
+    while True:
+        if reset == 'Y' or reset == 'y':
+            reset_contactbook()
+            break
+        else:
+            back_to_menu()
+            break
+        return False
 
 
 def exit_programme():
