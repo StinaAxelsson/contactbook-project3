@@ -7,7 +7,7 @@
 # [X]search for existing contact (by name, number or email)
 # []delete a contact
 # [X]Show all the existing contacts with a linebreak after every contact
-# []Delete all the contats in the book (check(have to fix it))
+# [X]Delete all the contats in the book (check(have to fix it))
 # [X]Exit to break the program from anywhere the user is
 # []import libraby that make color of the feedbacks in code
 
@@ -290,6 +290,7 @@ def find_column(column, value):
     return column_match
 
 
+# RESET ALL CONTACTS
 def reset_contactbook():
     print("delete all contacts...\n")
     CONTACTS.clear()
