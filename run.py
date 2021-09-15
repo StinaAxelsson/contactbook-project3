@@ -267,20 +267,19 @@ def get_from_search(find_search):
     else:
         print("Not a valid input, Try again")
 
-    for row_value in (search):
-        row_number = row_value.row
-        value_list = CONTACTS.row_values(row_number)
-        listToStr = ' '.join([str(elem) for elem in value_list])
-        if len(listToStr) != 0:
+    if search:
+        for row_value in (search):
+            row_number = row_value.row
+            value_list = CONTACTS.row_values(row_number)
+            listToStr = ' '.join([str(elem) for elem in value_list])
+
             print("------------------------------------------")
             print(listToStr)
             print("------------------------------------------")
             delete_one(row_number)
-        else:
-            print("Contact not found")
-            search_contact()
-            break
-    back_to_menu()
+    else:
+        print("Contact not found")
+        search_contact()
 
 
 def find_column(column, value):
