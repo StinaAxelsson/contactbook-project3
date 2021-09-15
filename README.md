@@ -42,7 +42,7 @@ As a developer of this programme, my goals was..
 * Make 
 
 ## Structure
-![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/flowchart-contactbook.pdf)
+![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/flowchart.jpg)
 
 Structure of this programme is what you can see in the flowchart here. There is six different task from a menu that get the user to the function depending on what the user input. Every function has a way to get back to the menu or quit the programme after the task is done. 
 In the flowchart every function has a own colour just to make it easy to follow. 
@@ -63,6 +63,26 @@ In the flowchart every function has a own colour just to make it easy to follow.
   * This feature will reset the worksheet and alla the information that was stored deletes. Only the headers in the worksheet will remain for store new contacts.
 * Exit programme
   * This feature exit the programme and can be reach from some of the other features also.
+
+## Features Left to Implement
+This is what I want to impement in future on this programme to make it complete. But that I did not prioritate right now for the short of time.
+* Edit contact
+  * This features is something I want to implement, and it is a feature that is missing in this programme. So the user easy can change some details about a contact instead of delete it and start over.
+* Categorys
+  * So the user can have som structure of the contacts. Like "Family", "Co-Workers", "Friends" etc. It is a nice detail for the user experience.
+
+# Technologies Used
+## Language
+* Python3 - This project is written only with Python as a the programming language.
+## Other programmes
+* Google sheets - To get my google sheet document (gspread) for store the information the user insert, and to remove information.
+* Google Auth - The API to connect my gspread to the programme.
+* GitHub - Making my repository and push my commited code.
+* Git - Save and commit my workspace.
+* Heroku - To deploy my programme and get a livelink.
+* Am I responsive - For the print screen of my deployed programme for this readme.
+* Draw.io - For make my flowchart.
+
 # Credits
 Credits:
 https://stackoverflow.com/questions/45175995/gspread-reading-a-google-sheet-file-using-python-3 
