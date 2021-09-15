@@ -82,10 +82,17 @@ This is what I want to impement in future on this programme to make it complete.
 * Heroku - To deploy my programme and get a livelink.
 * Am I responsive - For the print screen of my deployed programme for this readme.
 * Draw.io - For make my flowchart.
+# Testing
+## Validator Testing
+
+# Deployment
 
 # Credits
 Credits:
 https://stackoverflow.com/questions/45175995/gspread-reading-a-google-sheet-file-using-python-3 
 This is for the opening of the gspred showing all contacts
 https://www.geeksforgeeks.org/python-program-to-convert-a-list-to-string/ - for fix the list to just strings in search function using join() method
+
+# Acknowledgement
+
 
