@@ -78,7 +78,7 @@ def add_new_contact():
     add_new_contact = {}
 
     while True:
-        first_name = input("First Name: \n")
+        first_name = input("First Name: \n").capitalize()
         if not first_name.capitalize():
             print("Please enter First Name with letters a-z")
         else:
@@ -86,7 +86,7 @@ def add_new_contact():
     add_new_contact["FIRST NAME"] = first_name
 
     while True:
-        last_name = input("Last Name: \n")
+        last_name = input("Last Name: \n").capitalize()
         if not last_name.capitalize():
             print("Please enter Last Name with letters a-z")
         else:
@@ -238,6 +238,7 @@ def search_contact():
             get_from_search('E-Mail')  # make a new function
         else:
             start()
+            break
         return False
 
 
