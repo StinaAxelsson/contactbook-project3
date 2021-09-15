@@ -151,10 +151,10 @@ def back_to_menu():
             break
         elif user_choise == "Q" or user_choise == "q":
             exit_programme()
-            break
         else:
             print("Invalid input, Try again")
             back_to_menu()
+            break
         return False
 
 
@@ -248,12 +248,12 @@ def get_from_search(find_search):
     and the function looking for it in the contact worksheet.
     """
     if find_search == 'First Name':
-        find_object = input('First Name: \n')
+        find_object = input('First Name: \n').capitalize()
         fname = find_column('First Name', find_object)
         search = fname
     elif find_search == 'Last Name':
-        find_object = input('Last Name: \n')
-        lname = find_column('First Name', find_object)
+        find_object = input('Last Name: \n').capitalize()
+        lname = find_column('Last Name', find_object)
         search = lname
     elif find_search == 'Phone Number':
         find_object = input('Phone Number: \n')
@@ -278,6 +278,7 @@ def get_from_search(find_search):
         else:
             print("Contact not found")
             search_contact()
+            break
     back_to_menu()
 
 
@@ -301,10 +302,14 @@ def delete_one(contact):
     delete = input("Do you want to delete this contact? Y/N: \n")
     while True:
         if delete == 'Y' or delete == 'y':
-            print("Deliting.....")
+            print("Deleting.....")
             delete_row(contact)
+        elif delete == 'N' or delete == 'n':
+            start()
+            break
         else:
-            back_to_menu()
+            print("Invalid input, Try again")
+            delete_one(contact)
             break
         return False
 
@@ -320,6 +325,10 @@ def delete_row(row):
 
 
 def delete_menu():
+    """
+    When user choose delete a contact from menu, they
+    get this message that takes them to search fucntion.
+    """
     print("You have to search for the contact you want to delete first\n")
     return search_contact()
 
@@ -349,8 +358,11 @@ def validate_reset():
         if reset == 'Y' or reset == 'y':
             reset_contactbook()
             break
-        else:
+        elif reset == "N" or reset == "n":
             back_to_menu()
+            break
+        else:
+            print("Not a valid input, Try again!")
             break
         return False
 
