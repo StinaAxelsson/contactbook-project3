@@ -1,16 +1,3 @@
-# start a welcome message and -
-# [X]-a menu with 6 different task to choose between
-# [X]a while loop while user use the program
-# [X]funtions for every task in the menu
-# [X]validating functions so the user input the right value
-# [X]add contact + update sheet
-# [X]search for existing contact (by name, number or email)
-# [X]delete a contact
-# [X]Show all the existing contacts with a linebreak after every contact
-# [X]Delete all the contats in the book (check(have to fix it))
-# [X]Exit to break the program from anywhere the user is
-# []import libraby that make color of the feedbacks in code
-
 import gspread
 import re
 from google.oauth2.service_account import Credentials
@@ -94,8 +81,10 @@ def add_new_contact():
     add_new_contact["Lname"] = last_name
 
     while True:
-        # To valid phone number using help from
-        # https://www.sololearn.com/Discuss/2588446/solved-python-phone-number-validator
+        """
+        To valid phone number using help from
+        https://www.sololearn.com/Discuss/2588446/solved-python-phone-number-validator
+        """
         phone_number = input("Phone Number: \n")
         pattern = r"^[0-9]"
         match = re.match(pattern, phone_number)
@@ -188,7 +177,6 @@ def update_worksheet_contact(add_new_contact):
     add_one_more()
 
 
-# SHOW ALL EXISTING CONTACTS
 def show_all_contacts():
     """
     Function to get all the contacts from google sheet
@@ -204,8 +192,8 @@ def show_all_contacts():
 def printing_all_contacts(existing):
     """
     Function that takes all the existing contacts from worksheet
-    and make it a loop with the headers as keys and the contact
-    information as value in a list for each contact.
+    and make it a loop with the headers as title and the contact
+    information as info in a list for each contact.
     """
     one_contact = []
     for title, info in existing.items():
@@ -214,7 +202,6 @@ def printing_all_contacts(existing):
     return one_contact
 
 
-# SEARCH CONTACTS
 def search_contact():
     """
     Search function with a menu for the user to enter what
@@ -229,13 +216,13 @@ def search_contact():
     while True:
         search_input = input("Please enter a number 1-5: \n")
         if search_input == '1':
-            get_from_search('First Name')  # make a new function
+            get_from_search('First Name')
         elif search_input == '2':
-            get_from_search('Last Name')  # make a new function
+            get_from_search('Last Name')
         elif search_input == '3':
-            get_from_search('Phone Number')  # make a new function
+            get_from_search('Phone Number')
         elif search_input == '4':
-            get_from_search('E-Mail')  # make a new function
+            get_from_search('E-Mail')
         else:
             start()
             break
@@ -278,7 +265,7 @@ def get_from_search(find_search):
             print("------------------------------------------")
             delete_one(row_number)
     else:
-        print("Contact not found")
+        print("Contact not found, Try search again\n")
         search_contact()
 
 
@@ -293,7 +280,6 @@ def find_column(column, value):
     return column_match
 
 
-# DELETE ONE CONTACT
 def delete_one(contact):
     """
     Validation for user before delete a contact
@@ -333,7 +319,6 @@ def delete_menu():
     return search_contact()
 
 
-# RESET ALL CONTACTS
 def reset_contactbook():
     """
     When user want to reset all contacts and delete the worksheet.
@@ -372,8 +357,8 @@ def exit_programme():
     Shutting down programme when user choose the exit task in menu
     """
     print("-------------------------------------------------------")
-    print("-------------Thank you for using contact app-----------")
-    print("-------------------------------------------------------")
+    print("---------------Thank you for using this----------------")
+    print("--------------------Contactbook app!-------------------")
     print("------------------------GOODBYE------------------------")
     print("-------------------------------------------------------")
 
