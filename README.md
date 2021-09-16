@@ -108,7 +108,7 @@ This is what I want to impement in future on this program to make it more comple
 * [Am I responsive](http://ami.responsivedesign.is/) - For the print screen of my deployed programme for this readme.
 * [Draw.io](https://app.diagrams.net/) - For make my flowchart.
 * [PEP8](http://pep8online.com/) - To validate python code
-* [Re](https://docs.python.org/3/library/re.html) - to import re library for using regrexpressions for email.
+* [Re](https://docs.python.org/3/library/re.html) - to import re library for using regrexpressions for email validation.
 
 [Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 # Testing
