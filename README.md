@@ -65,24 +65,27 @@ In the flowchart every function has a own colour just to make it easy to follow.
   * Gives a choise to go back to menu or quit programe from here.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/viewall.png)
 * Delete one contact
-  * If a user wants to delete a contact, they have to search for the contact first and will be giving 4 choises to search after. "First name", "Last name", "Phonenumber" or their "Email" and then the contact will be printed out.
+  * If a user wants to delete a contact, they have to search for the contact first and will be giving 4 choises in a search-menu what they will search for. "First name", "Last name", "Phone number" or their "E-mail" and then the contact will be printed out.
+  * If there is no contact found, it will provide a error message and let the user know that there is no contact with that information and pass back to search menu again for another search.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/delete.png)
   * If the user wants to delete it, they have to validate it with Yes or No and then the row with that contacts information will be deleted from the worksheet.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/delete2.png)
 * Search contact
-  * This feature is similar to delete because it takes the user to the same function. To search after the specific contact by first name, last name, phone number or email address. And gives the user choise to delete it. Gives a error message if no contact could be find.
+  * This feature is similar to the previous delete-feature, because it pass the user to the same function(search). Then the user have to search for the contact by first name, last name, phone number or email address. And gives the user the same choise to delete it or not.
+  * Gives a error message if no contact could be find.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/search.png)
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/searchnofound.png)
 * Reset the contactbook
-  * This feature will reset the worksheet and alla the information that was stored deletes. Only the headers in the worksheet will remain for store new contacts.
+  * This feature will reset the worksheet and all the information that was stored deletes. Only the headers-row in the worksheet will remain for store new contacts.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/reset.png)
 * Exit programme
   * This feature exit the programme and can be reach from some of the other features also.
+  * Provide a message with a goodbye.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/exit.png)
 
 
 ## Features Left to Implement
-This is what I want to impement in future on this programme to make it complete. But that I did not prioritate right now for the short of time.
+This is what I want to impement in future on this programme to make it more complete. But that I did not prioritate right now for the short of time.
 * Edit contact
   * This features is something I want to implement, and it is a feature that is missing in this programme. So the user easy can change some details about a contact instead of delete it and start over.
 * Categorys

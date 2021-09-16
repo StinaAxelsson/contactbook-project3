@@ -340,7 +340,7 @@ def delete_menu():
     get this message that takes them to search fucntion.
     """
     print("You have to search for the contact you want to delete first\n")
-    return search_contact()
+    search_contact()
 
 
 def reset_contactbook():
