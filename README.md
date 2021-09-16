@@ -110,6 +110,16 @@ This is what I want to impement in future on this programme to make it more comp
 
 [Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 # Testing
+During the development of this project I hav met some problems and errors, of course. 
+My biggest problem from the beginning was to understand all the logic how to pass functions in eachother with arguments and values.
+But I started small and took one small step at the time. Starting with the basic like start menu, exit program and a main function.
+Then I used alot of print statements to make sure that I have succeeded with the functions and also to obtain certain values.
+
+When I was finished with the most simplest functions I started with the more complicated functions, and one of the ones I worked hard on was the **search function**. Where I first needed to find the cell value based on the user's input on what they wanted to search for, and then find them in my worksheet.
+
+In order to then be able to print out the entire line of information from the cell-value that the user searched for I searched for help on google with no result and then I got help from my mentor during my mid session, who gave me a start in how to figure out how to proceed. Slack has also been very helpful with this issue I was working on for about 2-3 days until I finally figure that out. I like to thank Claire lemonnier_lead on slack to pointing me on the right direction for this!
+
+
 ## Validator Testing
 When I checked my code for PEP8 requirements it's showed ALL RIGHT
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/validation.png)
@@ -151,7 +161,7 @@ The order of the buildpacks is importent to be Python at the top and node.JS at 
 [Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 
 # Credits
-Credits:
+* [gspread document](https://docs.gspread.org/en/latest/index.html ) - Using this as a help for making my functions
 * [StackOverflow](https://stackoverflow.com/questions/45175995/gspread-reading-a-google-sheet-file-using-python-3 ) -
 This is for the opening of the gspred showing all contacts
 * [GeeksforGeeks](https://www.geeksforgeeks.org/python-program-to-convert-a-list-to-string/) - for fix the list to just strings in search function using join() method
