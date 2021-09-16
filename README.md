@@ -8,22 +8,22 @@ This project is developed as my third portfolio project during my course at Code
 
 This programme is a contact book that can provide the user to add their contacts and store them all in one place. You can use this program to add new contacts with relevant information like first name, last name, phonenumber and e-mail address and save it in a google sheet document. You can search for specific contacts that is saved, view all existing contacts and you can delete single contacts or all at once. 
 # Content
-* Project Description
-* UX
-  * User Stories
-  * Site Owner Goals
-  * Structure
-* Features
-  * Existing Features
-  * Features Left To Implement
-* Technologies Used
-  * Languages
-  * Other Programmes
-* Testing
-  * Validator Testing
-* Deployment
-* Credits
-* Ackmowledgements
+* [Project Description](https://github.com/StinaAxelsson/contactbook-project3#project-description)
+* [UX](https://github.com/StinaAxelsson/contactbook-project3#ux)
+  * [User Stories](https://github.com/StinaAxelsson/contactbook-project3#user-stories)
+  * [Site Owner Goals](https://github.com/StinaAxelsson/contactbook-project3#site-owner-goals)
+  * [Structure](https://github.com/StinaAxelsson/contactbook-project3#structure)
+* [Features](https://github.com/StinaAxelsson/contactbook-project3#features)
+  * [Existing Features](https://github.com/StinaAxelsson/contactbook-project3#existing-features)
+  * [Features Left To Implement](https://github.com/StinaAxelsson/contactbook-project3#features-left-to-implement)
+* [Technologies Used](https://github.com/StinaAxelsson/contactbook-project3#technologies-used)
+  * [Languages](https://github.com/StinaAxelsson/contactbook-project3#language)
+  * [Other Programmes](https://github.com/StinaAxelsson/contactbook-project3#other-programmes)
+* [Testing](https://github.com/StinaAxelsson/contactbook-project3#testing)
+  * [Validator Testing](https://github.com/StinaAxelsson/contactbook-project3#validator-testing)
+* [Deployment](https://github.com/StinaAxelsson/contactbook-project3#deployment)
+* [Credits](https://github.com/StinaAxelsson/contactbook-project3#credits)
+* [Ackmowledgements](https://github.com/StinaAxelsson/contactbook-project3#acknowledgement)
 
 # UX
 ## User Stories
@@ -46,6 +46,8 @@ As a developer of this programme, my goals was..
 
 Structure of this programme is what you can see in the flowchart here. There is six different task from a menu that get the user to the function depending on what the user input. Every function has a way to get back to the menu or quit the programme after the task is done. 
 In the flowchart every function has a own colour just to make it easy to follow. 
+
+[Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 # Features
 ## Existing Features
 * Start Menu
@@ -73,12 +75,15 @@ In the flowchart every function has a own colour just to make it easy to follow.
   * This feature exit the programme and can be reach from some of the other features also.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/exit.png)
 
+
 ## Features Left to Implement
 This is what I want to impement in future on this programme to make it complete. But that I did not prioritate right now for the short of time.
 * Edit contact
   * This features is something I want to implement, and it is a feature that is missing in this programme. So the user easy can change some details about a contact instead of delete it and start over.
 * Categorys
   * So the user can have som structure of the contacts. Like "Family", "Co-Workers", "Friends" etc. It is a nice detail for the user experience.
+
+[Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 
 # Technologies Used
 ## Language
@@ -93,10 +98,14 @@ This is what I want to impement in future on this programme to make it complete.
 * Draw.io - For make my flowchart.
 * PEP8 - To validate python code
 * Re - to import re library for using regrexpressions for email. https://docs.python.org/3/library/re.html
+
+[Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 # Testing
 ## Validator Testing
 When I checked my code for PEP8 requirements it's showed ALL RIGHT
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/validation.png)
+
+[Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 
 # Deployment
 To build this program, I have used the Code Institutes template to be able to deploy it on Heroku and to be able to use the program on a web server. 
@@ -126,15 +135,23 @@ The order of the buildpacks is importent to be Python at the top and node.JS at 
 16. Then I choose Automatic Deploys button that will automatically rebuild the app everytime you add, commit and push from GitPod.
 
 ### Here is the final deployed link:
+[ContactBook app](https://contact-book-pp3.herokuapp.com/) (Opens in same tab)
 
-https://contact-book-pp3.herokuapp.com/
+
+[Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 
 # Credits
 Credits:
-https://stackoverflow.com/questions/45175995/gspread-reading-a-google-sheet-file-using-python-3 
+* [StackOverflow](https://stackoverflow.com/questions/45175995/gspread-reading-a-google-sheet-file-using-python-3 ) -
 This is for the opening of the gspred showing all contacts
-https://www.geeksforgeeks.org/python-program-to-convert-a-list-to-string/ - for fix the list to just strings in search function using join() method
+* [GeeksforGeeks](https://www.geeksforgeeks.org/python-program-to-convert-a-list-to-string/) - for fix the list to just strings in search function using join() method
+
+
+
+[Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 
 # Acknowledgement
+
+[Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 
 
