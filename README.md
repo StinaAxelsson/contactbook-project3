@@ -144,6 +144,13 @@ Also one day there was a problem with github that made my code not connect to my
 
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/gitpoderror.jpg)
 
+There is a problem that i have made a small fix to, that I can improve in future!
+If the contactbook contained more than one person with the same name, I could not delete that because I only could delete one of them, and then I got errors if I tried to delete it again. 
+To fix this I made I simple solution because of the lack of time until deadline. So its not the most userfriendly and most effective solution, but it solve the issue and make the programe work with no errors.
+
+So I implement an if statement in "Add_new_contact" function. Where I checked if there already exist the name that the user is input. And if there already is someone with that name, it provide with a error message that the contact already exist. In that way, there is never more than one with the same name so that make the delete function to work fine. The only problem with this solution is that you cant add two different contacts with different last name but have tha same surename. So that is something I will fix in future.
+![]()
+
 
 # Deployment
 To build this program, I have used the Code Institutes template to be able to deploy it on Heroku and to be able to use the program on a web server. 
