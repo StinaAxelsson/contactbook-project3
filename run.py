@@ -243,6 +243,8 @@ def search_contact():
             get_from_search('Phone Number')
         elif search_input == '4':
             get_from_search('E-Mail')
+        elif search_input == '5':
+            start()
         else:
             print("Not a valid number, try again")
             search_contact()
@@ -312,8 +314,7 @@ def delete_one(contact):
             print("Deleting.....\n")
             delete_row(contact)
         elif delete == 'N' or delete == 'n':
-            start()
-            break
+            back_to_menu()
         else:
             print("Invalid input, Try again")
             break
