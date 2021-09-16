@@ -190,6 +190,7 @@ The order of the buildpacks is importent to be Python at the top and node.JS at 
 [Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 
 # Credits
+All code is written by me, with help from slack, tutor support, my mentor and this websites.
 * [gspread document](https://docs.gspread.org/en/latest/index.html ) - Using this as a help for making my functions
 * [StackOverflow](https://stackoverflow.com/questions/45175995/gspread-reading-a-google-sheet-file-using-python-3 ) -
 This is for the opening of the gspred showing all contacts
