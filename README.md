@@ -4,9 +4,9 @@ Author: Stina Axelsson
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/responsive.png)
 
 # Project Description
-This project is developed as my third portfolio project during my course at Code Institute. It is a back-end application using Python programming langugae.
+This project is developed as my third portfolio project during my course at Code Institute. It is an command-line application using only Python as programming language.
 
-In this contact book programme, you can add new contacts and save it in a google sheet document. You can search for specific contacts that is saved, view all existing contacts and delete one or all. 
+This programme is a contact book that can provide the user to add their contacts and store them all in one place. You can use this program to add new contacts with relevant information like first name, last name, phonenumber and e-mail address and save it in a google sheet document. You can search for specific contacts that is saved, view all existing contacts and you can delete single contacts or all at once. 
 # Content
 * Project Description
 * UX
@@ -29,17 +29,17 @@ In this contact book programme, you can add new contacts and save it in a google
 ## User Stories
 As a user I want...
 * ..that the programme is simple to understand and what it is about.
-* .. to get feedback of what is happening when navigate thru the programme/app.
+* .. to get feedback of what is happening when navigate thrue the programme/app.
 * .. to add contact, be able to see all my saved contacts and to delete one or all.
 * .. ways to get back to start or menu easy.
-* .. 
+
 ## Site Owner Goals
 As a developer of this programme, my goals was..
 * To build a programme that can store and add information from a user.
 * Make it easy for user to understand what it is about and how to use it.
 * To make functions that add and store user inputs in API google sheets.
 * Create functions like add a contact, open exisiting contacts and delete. 
-* Make 
+
 
 ## Structure
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/flowchart.jpg)
@@ -76,7 +76,7 @@ This is what I want to impement in future on this programme to make it complete.
 * Python3 - This project is written only with Python as a the programming language.
 ## Other programmes
 * Google sheets - To get my google sheet document (gspread) for store the information the user insert, and to remove information.
-* Google Auth - The API to connect my gspread to the programme.
+* Gspread - The API to connect my to my programme.
 * GitHub - Making my repository and push my commited code.
 * Git - Save and commit my workspace.
 * Heroku - To deploy my programme and get a livelink.
