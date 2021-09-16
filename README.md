@@ -7,7 +7,7 @@
 # Project Description
 This project is developed as my third portfolio project during my course at Code Institute. It is an command-line application using only Python as programming language.
 
-This programme is a contact book that can provide the user to add their contacts and store them all in one place. You can use this program to add new contacts with relevant information like first name, last name, phonenumber and e-mail address and save it in a google sheet document. You can search for specific contacts that is saved, view all existing contacts and you can delete single contacts or all at once. 
+This program is a contact book that can provide the user to add their contacts and store them all in one place. You can use this program to add new contacts with relevant information like first name, last name, phonenumber and e-mail address and save it in a google sheet document. You can search for a specific contact that is saved, view all existing contacts and you can delete a single contact or all at once. 
 # Content
 * [Project Description](https://github.com/StinaAxelsson/contactbook-project3#project-description)
 * [UX](https://github.com/StinaAxelsson/contactbook-project3#ux)
@@ -22,6 +22,7 @@ This programme is a contact book that can provide the user to add their contacts
   * [Other Programmes](https://github.com/StinaAxelsson/contactbook-project3#other-programmes)
 * [Testing](https://github.com/StinaAxelsson/contactbook-project3#testing)
   * [Validator Testing](https://github.com/StinaAxelsson/contactbook-project3#validator-testing)
+  * [Bug and fix](https://github.com/StinaAxelsson/contactbook-project3#bug-and-fix)
 * [Deployment](https://github.com/StinaAxelsson/contactbook-project3#deployment)
 * [Credits](https://github.com/StinaAxelsson/contactbook-project3#credits)
 * [Ackmowledgements](https://github.com/StinaAxelsson/contactbook-project3#acknowledgement)
@@ -29,41 +30,42 @@ This programme is a contact book that can provide the user to add their contacts
 # UX
 ## User Stories
 As a user I want...
-* ..that the programme is simple to understand and what it is about.
+* ..that the program is simple to understand and what it is about.
 * .. to get feedback of what is happening when navigate thrue the programme/app.
 * .. to add contact, be able to see all my saved contacts and to delete one or all.
-* .. ways to get back to start or menu easy.
+* .. ways to get back to menu easy.
 
 ## Site Owner Goals
-As a developer of this programme, my goals was..
-* To build a programme that can store and add information from a user.
+As a developer of this program, my goals was..
+* To build a program that can store and add information from a user.
 * Make it easy for user to understand what it is about and how to use it.
 * To make functions that add and store user inputs in API google sheets.
 * Create functions like add a contact, open exisiting contacts and delete. 
+* Make a readable code
 
 
 ## Structure
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/flowchart.jpg)
 
-Structure of this programme is what you can see in the flowchart here. There is six different task from a menu that get the user to the function depending on what the user input. Every function has a way to get back to the menu or quit the programme after the task is done. 
+Structure of this program is what you can see in the flowchart here. There is six different task from a menu that get the user to the different functions depending on what the user input. Every function has a way to get back to the menu or quit the programme after the task is done. 
 In the flowchart every function has a own colour just to make it easy to follow. 
 
 [Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 # Features
 ## Existing Features
 * Start Menu
-  - Programme starts with this welcome message and a list of choises. The user needs to input the number of what task they want to follow and the programme open that function.
+  - Programme starts with this welcome message and a list of choises. The user needs to input the number of what task they want to follow and the program open that function.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/start.png)
 * Add a new contact
   * When add a new contact, user need to fill in first name, last name, phone number and email and then the information will be saved in the worksheet gspread.
   * Validation message when the user have correctly enter all the information.
   * Error message if user put more than 11 digits on phone number, and if user enter letters in phone numbers.
   * Error message is user have not entered a valid email address.
-  * I have chosen to not give error message if user want to enter digits in "First Name" and "Last Name" just because if there is a company that using numbers in their name i want that to work.
+  * I have chosen to not give error message if user want to enter digits in "First Name" and "Last Name" just because if there is a company that using numbers in their name I want that to work with no issues.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/addnew.png)
 * view all existing contacts
   * This function will open all the existing contacts that is saved in the worksheet and print them out.
-  * Gives a choise to go back to menu or quit programe from here.
+  * Gives a choise to go back to menu or quit program from here.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/viewall.png)
 * Delete one contact
   * If a user wants to delete a contact, they have to search for the contact first and will be giving 4 choises in a search-menu what they will search for. "First name", "Last name", "Phone number" or their "E-mail" and then the contact will be printed out.
@@ -72,23 +74,23 @@ In the flowchart every function has a own colour just to make it easy to follow.
   * If the user wants to delete it, they have to validate it with Yes or No and then the row with that contacts information will be deleted from the worksheet.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/delete2.png)
 * Search contact
-  * This feature is similar to the previous delete-feature, because it pass the user to the same function(search). Then the user have to search for the contact by first name, last name, phone number or email address. And gives the user the same choise to delete it or not.
+  * This feature is the same as the previous delete-feature, because it pass the user to the same function(search). Then the user have to search for the contact by first name, last name, phone number or email address. And gives the user the same choise to delete it or not.
   * Gives a error message if no contact could be find.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/search.png)
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/searchnofound.png)
 * Reset the contactbook
-  * This feature will reset the worksheet and all the information that was stored deletes. Only the headers-row in the worksheet will remain for store new contacts.
+  * This feature will reset the worksheet and all the information that was stored will be deleted. Only the headers-row in the worksheet will remain for store new contacts.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/reset.png)
-* Exit programme
+* Exit program
   * This feature exit the programme and can be reach from some of the other features also.
   * Provide a message with a goodbye.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/exit.png)
 
 
 ## Features Left to Implement
-This is what I want to impement in future on this programme to make it more complete. But that I did not prioritate right now for the short of time.
+This is what I want to impement in future on this program to make it more complete. But that I did not prioritate right now for the short of time.
 * Edit contact
-  * This features is something I want to implement, and it is a feature that is missing in this programme. So the user easy can change some details about a contact instead of delete it and start over.
+  * This features is something I want to implement. So the user easy can change some details about a contact instead of delete it and start over.
 * Categorys
   * So the user can have som structure of the contacts. Like "Family", "Co-Workers", "Friends" etc. It is a nice detail for the user experience.
 
@@ -149,7 +151,8 @@ If the contactbook contained more than one person with the same name, I could no
 To fix this I made I simple solution because of the lack of time until deadline. So its not the most userfriendly and most effective solution, but it solve the issue and make the programe work with no errors.
 
 So I implement an if statement in "Add_new_contact" function. Where I checked if there already exist the name that the user is input. And if there already is someone with that name, it provide with a error message that the contact already exist. In that way, there is never more than one with the same name so that make the delete function to work fine. The only problem with this solution is that you cant add two different contacts with different last name but have tha same surename. So that is something I will fix in future.
-![]()
+
+![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/doublecheck.png)
 
 
 # Deployment
