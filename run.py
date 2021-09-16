@@ -66,6 +66,7 @@ def add_new_contact():
 
     while True:
         first_name = input("First Name: \n").capitalize()
+        valid = first_name
         if not first_name.capitalize():
             print("Please enter First Name with letters a-z")
         else:
@@ -103,14 +104,28 @@ def add_new_contact():
             continue
     add_new_contact["E-Mail"] = email
 
-    print("-----------------------------------")
-    print("ADDED:\n")
-    print(f"Name: {first_name.upper()} {last_name.upper()}")
-    print(f'Number: {phone_number}')
-    print(f'E-Mail: {email}\n')
-    print("-----------------------------------")
+    if add_new_contact:
+        valid = check_double('First Name', first_name)
+        print(valid)
+    else:
+        print("-----------------------------------")
+        print("ADDED:\n")
+        print(f"Name: {first_name.upper()} {last_name.upper()}")
+        print(f'Number: {phone_number}')
+        print(f'E-Mail: {email}\n')
+        print("-----------------------------------")
 
-    return update_worksheet_contact(add_new_contact)
+        return update_worksheet_contact(add_new_contact)
+
+
+def check_double(column, name):
+    """
+    function that check if the name user input in add_new_contact already
+    exist, so there is no doublicate contacts
+    """
+    print("checking...")
+    check = CONTACTS.find(name)
+    return check
 
 
 def validate_email_input(email):
