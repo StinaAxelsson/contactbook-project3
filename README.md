@@ -123,10 +123,13 @@ In order to then be able to print out the entire line of information from the ce
 What wrinkled my brain was that it is exactly the same code as if you had chosen the task 4 search contact in the start menu instead, and when you go that way, it works with no issues.
 
 I tested everything possible in my code to try to solve the problem but with no positive results. I reach out for both my mentor and tutor support that both scratched their heads on this one, almost felt like a mystery. The tutor then passed me over to another tutor and after some testing he finally find the bug issue.
-I had not put a **break** statement in the start menu for the 3th task! When I did that, the code worked how it supposed again. Such a small error could cause a full day of troubleshooting and 4 different people's brain wrinkles. 
+I had not put a **break** statement in the start menu for the 3th task! When I did that, the code worked how it supposed again. Such a small error could cause a full day of troubleshooting and 4 different people's brain wrinkles. I like to thank John from tutor support for cracked the nut.
+![]()
+
+#
 
 ## Validator Testing
-When I checked my code for PEP8 requirements it's showed ALL RIGHT
+When I checked my code for PEP8 requirements it's showed ALL RIGHT with 0 issues.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/validation.png)
 
 [Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
@@ -176,6 +179,11 @@ This is for the opening of the gspred showing all contacts
 [Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 
 # Acknowledgement
+
+Here I just like to thank some people who has been supporting me during the process of develpe this project.
+First I like to thank my beloved partner that has taking care of the schooling of the kids, giving me baked muffins to my desk and just always give me positive support to keep on struggle with this. 
+Then I like to thank my new mentor Richard Wells that have been giving me alot of helpful inputs to improve my project. Also helped me with some of the issues I struggled with along the way. Very supportiv and helpful!
+At last I want to thank the community at slack that always is availble with great advice and help when you need it, or just take a break and chatting with students in the same position as I am.
 
 [Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 
