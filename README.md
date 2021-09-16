@@ -55,9 +55,14 @@ In the flowchart every function has a own colour just to make it easy to follow.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/start.png)
 * Add a new contact
   * When add a new contact, user need to fill in first name, last name, phone number and email and then the information will be saved in the worksheet gspread.
+  * Validation message when the user have correctly enter all the information.
+  * Error message if user put more than 11 digits on phone number, and if user enter letters in phone numbers.
+  * Error message is user have not entered a valid email address.
+  * I have chosen to not give error message if user want to enter digits in "First Name" and "Last Name" just because if there is a company that using numbers in their name i want that to work.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/addnew.png)
 * view all existing contacts
   * This function will open all the existing contacts that is saved in the worksheet and print them out.
+  * Gives a choise to go back to menu or quit programe from here.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/viewall.png)
 * Delete one contact
   * If a user wants to delete a contact, they have to search for the contact first and will be giving 4 choises to search after. "First name", "Last name", "Phonenumber" or their "Email" and then the contact will be printed out.
