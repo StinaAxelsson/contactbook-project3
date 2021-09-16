@@ -46,7 +46,7 @@ def start():
             search_contact()
             break
         elif choise == '5':
-            print("Taking you to Reset contact book...")
+            print("Taking you to Reset contact book...\n")
             validate_reset()
             break
         elif choise == '6':
@@ -201,8 +201,11 @@ def show_all_contacts():
     contact book
     """
     get_all = CONTACTS.get_all_records()
-    for contact in get_all:
-        printing_all_contacts(contact)
+    if get_all:
+        for contact in get_all:
+            printing_all_contacts(contact)
+    else:
+        print("Contactbook is empty!\n")
     back_to_menu()
 
 
@@ -346,7 +349,7 @@ def reset_contactbook():
     CONTACTS.clear()
     values = ("First name", "Last Name", "Phone Number", "E-Mail")
     new_sheet = CONTACTS.append_row(values)
-    print("Phone Book is now reset")
+    print("Phone Book is now reset!\n")
     back_to_menu()
     return new_sheet
 
