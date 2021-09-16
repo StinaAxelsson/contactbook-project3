@@ -50,19 +50,26 @@ In the flowchart every function has a own colour just to make it easy to follow.
 ## Existing Features
 * Start Menu
   - Programme starts with this welcome message and a list of choises. The user needs to input the number of what task they want to follow and the programme open that function.
+![]()
 * Add a new contact
   * When add a new contact, user need to fill in first name, last name, phone number and email and then the information will be saved in the worksheet gspread.
+![]()
 * view all existing contacts
   * This function will open all the existing contacts that is saved in the worksheet and print them out.
+![]()
 * Delete one contact
   * If a user wants to delete a contact, they have to search for the contact first and will be giving 4 choises to search after. "First name", "Last name", "Phonenumber" or their "Email" and then the contact will be printed out.
   * If the user wants to delete it, they have to validate it with Yes or No and then the row with that contacts information will be deleted from the worksheet.
+![]()
 * Search contact
   * This feature is similar to delete because it takes the user to the same function. To search after the specific contact by first name, last name, phone number or email address. And gives the user choise to delete it.
+![]()
 * Reset the contactbook
   * This feature will reset the worksheet and alla the information that was stored deletes. Only the headers in the worksheet will remain for store new contacts.
+![]()
 * Exit programme
   * This feature exit the programme and can be reach from some of the other features also.
+![]()
 
 ## Features Left to Implement
 This is what I want to impement in future on this programme to make it complete. But that I did not prioritate right now for the short of time.
