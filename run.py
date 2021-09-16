@@ -241,7 +241,8 @@ def search_contact():
         elif search_input == '4':
             get_from_search('E-Mail')
         else:
-            start()
+            print("Not a valid number, try again")
+            search_contact()
             break
         return False
 
@@ -312,7 +313,6 @@ def delete_one(contact):
             break
         else:
             print("Invalid input, Try again")
-            delete_one(contact)
             break
         return False
 
@@ -324,7 +324,7 @@ def delete_row(row):
     """
     deleted_contact = CONTACTS.delete_rows(row)
     print("Contact is now succesfully deleted\n")
-    back_to_menu()
+    start()
     return deleted_contact
 
 
