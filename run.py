@@ -317,7 +317,8 @@ def delete_one(contact):
             print("Deleting.....\n")
             delete_row(contact)
         elif delete == 'N' or delete == 'n':
-            start()
+            print("Not deleted!\n")
+            back_to_menu()
             break
         else:
             print("Invalid input, Try again")
