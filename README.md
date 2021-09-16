@@ -98,19 +98,19 @@ This is what I want to impement in future on this programme to make it more comp
 ## Language
 * Python3 - This project is written only with Python as a the programming language.
 ## Other programmes
-* Google sheets - To get my google sheet document (gspread) for store the information the user insert, and to remove information.
-* Gspread - The API to connect my to my programme.
-* GitHub - Making my repository and push my commited code.
-* Git - Save and commit my workspace.
-* Heroku - To deploy my programme and get a livelink.
-* Am I responsive - For the print screen of my deployed programme for this readme.
-* Draw.io - For make my flowchart.
-* PEP8 - To validate python code
-* Re - to import re library for using regrexpressions for email. https://docs.python.org/3/library/re.html
+* [Google sheets](https://www.google.com/sheets/about/) - To get my google sheet document (gspread) for store the information the user insert, and to remove information.
+* [Gspread](https://docs.gspread.org/en/latest/) - The API to connect my to my programme.
+* [GitHub](https://github.com/) - Making my repository and push my commited code.
+* [Gitpod](https://gitpod.io/workspaces) - Save and commit my workspace.
+* [Heroku](https://id.heroku.com/login) - To deploy my programme and get a livelink.
+* [Am I responsive](http://ami.responsivedesign.is/) - For the print screen of my deployed programme for this readme.
+* [Draw.io](https://app.diagrams.net/) - For make my flowchart.
+* [PEP8](http://pep8online.com/) - To validate python code
+* [Re](https://docs.python.org/3/library/re.html) - to import re library for using regrexpressions for email.
 
 [Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
 # Testing
-During the development of this project I hav met some problems and errors, of course. 
+During the development of this project I have met some problems and errors, of course. 
 My biggest problem from the beginning was to understand all the logic how to pass functions in eachother with arguments and values.
 But I started small and took one small step at the time. Starting with the basic like start menu, exit program and a main function.
 Then I used alot of print statements to make sure that I have succeeded with the functions and also to obtain certain values.
@@ -122,10 +122,12 @@ In order to then be able to print out the entire line of information from the ce
 
 **A second issue I got** was when I testing my code and find out that when use choose number 3 in start menu, and search for a contact and got the option to delete it but enter N for no, it takes you back to start menu and when you then choose 6 for exit. The program exit but then provide you with the input message in startmenu. 
 What wrinkled my brain was that it is exactly the same code as if you had chosen the task 4 search contact in the start menu instead, and when you go that way, it works with no issues.
+
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/deleteexitbug.png)
 
 I tested everything possible in my code to try to solve the problem but with no positive results. I reach out for both my mentor and tutor support that both scratched their heads on this one, almost felt like a mystery. The tutor then passed me over to another tutor and after some testing he finally find the bug issue.
 I had not put a **break** statement in the start menu for the 3th task! When I did that, the code worked how it supposed again. Such a small error could cause a full day of troubleshooting and 4 different people's brain wrinkles. I like to thank John from tutor support for cracked the nut.
+
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/delteerrorfix.png)
 
 
@@ -139,6 +141,8 @@ When I checked my code for PEP8 requirements it's showed ALL RIGHT with 0 issues
 As I already written. I solve the small bugs and errors along the way with help of using print statements and take small steps at the time. 
 I use google to find solutions or ask for help. I had two mayor problems that I wrote about and how I fixed them.
 Also one day there was a problem with github that made my code not connect to my API. But after speaking to tutor support I had to pip3 install -r requirements.txt again and then it worked like usual again!
+
+![]()
 
 
 # Deployment
