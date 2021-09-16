@@ -40,7 +40,9 @@ def start():
             break
         elif choise == '3':
             print("Taking you to Delete a contact...\n")
-            delete_menu()
+            print("You have to search for the contact you want to delete\n")
+            search_contact()
+            break
         elif choise == '4':
             print("Taking you to Search menu...\n")
             search_contact()
@@ -332,15 +334,6 @@ def delete_row(row):
     print("Contact is now succesfully deleted\n")
     start()
     return deleted_contact
-
-
-def delete_menu():
-    """
-    When user choose delete a contact from menu, they
-    get this message that takes them to search fucntion.
-    """
-    print("You have to search for the contact you want to delete first\n")
-    search_contact()
 
 
 def reset_contactbook():

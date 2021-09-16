@@ -119,7 +119,8 @@ When I was finished with the most simplest functions I started with the more com
 
 In order to then be able to print out the entire line of information from the cell-value that the user searched for I searched for help on google with no result and then I got help from my mentor during my mid session, who gave me a start in how to figure out how to proceed. Slack has also been very helpful with this issue I was working on for about 2-3 days until I finally figure that out. I like to thank Claire lemonnier_lead on slack to pointing me on the right direction for this!
 
-
+## User Stories
+* **As a user I want that the programme is simple to understand and what it is about.**
 ## Validator Testing
 When I checked my code for PEP8 requirements it's showed ALL RIGHT
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/validation.png)
