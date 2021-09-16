@@ -29,7 +29,7 @@ def start():
                 6. Exit\n
                     """)
     while True:
-        choise = (input("Choose the number of the task you want to do: \n"))
+        choise = input("Choose the number of the task you want to do: \n")
         if choise == '1':
             print("Taking you to Go Add new contact...\n")
             add_new_contact()
@@ -125,7 +125,7 @@ def check_double(column, name):
     function that check if the name user input in add_new_contact already
     exist, so there is no doublicate contacts
     """
-    print("checking...")
+    print("loading...")
     check = CONTACTS.find(name)
     return check
 
@@ -157,6 +157,7 @@ def back_to_menu():
             break
         elif user_choise == "Q" or user_choise == "q":
             exit_programme()
+            break
         else:
             print("Invalid input, Try again")
             back_to_menu()
@@ -314,7 +315,8 @@ def delete_one(contact):
             print("Deleting.....\n")
             delete_row(contact)
         elif delete == 'N' or delete == 'n':
-            back_to_menu()
+            start()
+            break
         else:
             print("Invalid input, Try again")
             break
