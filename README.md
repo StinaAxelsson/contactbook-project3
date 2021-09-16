@@ -82,12 +82,43 @@ This is what I want to impement in future on this programme to make it complete.
 * Heroku - To deploy my programme and get a livelink.
 * Am I responsive - For the print screen of my deployed programme for this readme.
 * Draw.io - For make my flowchart.
+* PEP8 - To validate python code
+* Re - to import re library for using regrexpressions for email. https://docs.python.org/3/library/re.html
 # Testing
 ## Validator Testing
 When I checked my code for PEP8 requirements it's showed ALL RIGHT
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/validation.png)
 
 # Deployment
+To build this program, I have used the Code Institutes template to be able to deploy it on Heroku and to be able to use the program on a web server. 
+And using Gitpod IDE, in order to save my work I always git add, git commit and then push it to my Github repository.
+
+## Project Deployment:
+For deploy this project in Heroku I followed these steps:
+
+1. Log in to my account at Heroku
+2. Select "new" and "Create new app" from the dashboard.
+3. Create a unique name for the project
+4. Navigate from the deploy tab at the top and select the setting tab.
+5. Because I use Code Institute template, I need to add a config var for creating this app. 
+(Not necessary if you do not use the template)
+6. Select Reveal config vars button. In KEY field, input PORT with capital letters.
+In VALUE field, input 8000 and then select add button.
+7. Then add buildpacks below the config var section.
+8. Select Python as yout first bulid pack in buildpacks window and save that.
+9. Add another buildpack and add node.JS and save.
+The order of the buildpacks is importent to be Python at the top and node.JS at the bottom.
+10. Select the deploy tab again and go to the deployment method section.
+11. Select GitHub - connect to GitHub button and follow the steps to connect to your GitHub account.
+12. Select your account and enter the name of yout repository and then select search.
+13. When Heroku has find your repository select connect to connect the repository to the app within Heroku.
+14. Below App connected section, I choose to manual deployments options further down. 
+15. When that is done correctly this will provide me the live link for this programe.
+16. Then I choose Automatic Deploys button that will automatically rebuild the app everytime you add, commit and push from GitPod.
+
+### Here is the final deployed link:
+
+https://contact-book-pp3.herokuapp.com/
 
 # Credits
 Credits:
