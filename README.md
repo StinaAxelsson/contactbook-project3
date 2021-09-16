@@ -1,6 +1,7 @@
 
-# Contact book python application
-Author: Stina Axelsson
+# [Contact book python application](https://contact-book-pp3.herokuapp.com/)
+
+**Author:** Stina Axelsson
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/responsive.png)
 
 # Project Description
@@ -117,7 +118,8 @@ When I checked my code for PEP8 requirements it's showed ALL RIGHT
 
 # Deployment
 To build this program, I have used the Code Institutes template to be able to deploy it on Heroku and to be able to use the program on a web server. 
-And using Gitpod IDE, in order to save my work I always git add, git commit and then push it to my Github repository.
+Using Gitpod IDE.
+In order to save my work I always **git add**, **git commit** with a message and then **git push** it to my Github repository.
 
 ## Project Deployment:
 For deploy this project in Heroku I followed these steps:
