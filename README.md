@@ -4,7 +4,7 @@ Author: Stina Axelsson
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/responsive.png)
 
 # Project Description
-This project is developed as my third portfolio project during my course at Code Institute. It is a back-end appplication using Python programming langugae.
+This project is developed as my third portfolio project during my course at Code Institute. It is a back-end application using Python programming langugae.
 
 In this contact book programme, you can add new contacts and save it in a google sheet document. You can search for specific contacts that is saved, view all existing contacts and delete one or all. 
 # Content

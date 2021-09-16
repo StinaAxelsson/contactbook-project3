@@ -104,10 +104,9 @@ def add_new_contact():
             continue
     add_new_contact["E-Mail"] = email
 
-    if add_new_contact:
-        valid = check_double('First Name', first_name)
-        print(valid)
-    else:
+    valid = check_double('First Name', first_name)
+
+    if not valid:
         print("-----------------------------------")
         print("ADDED:\n")
         print(f"Name: {first_name.upper()} {last_name.upper()}")
@@ -116,6 +115,9 @@ def add_new_contact():
         print("-----------------------------------")
 
         return update_worksheet_contact(add_new_contact)
+    else:
+        print("Contact with this name already exist")
+        back_to_menu()
 
 
 def check_double(column, name):
@@ -303,7 +305,7 @@ def delete_one(contact):
     delete = input("Do you want to delete this contact? Y/N: \n")
     while True:
         if delete == 'Y' or delete == 'y':
-            print("Deleting.....")
+            print("Deleting.....\n")
             delete_row(contact)
         elif delete == 'N' or delete == 'n':
             start()
@@ -321,7 +323,8 @@ def delete_row(row):
     user search for, from the worksheet.
     """
     deleted_contact = CONTACTS.delete_rows(row)
-    print("Contact is now deleted")
+    print("Contact is now succesfully deleted\n")
+    back_to_menu()
     return deleted_contact
 
 
