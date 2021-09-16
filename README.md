@@ -142,7 +142,7 @@ As I already written. I solve the small bugs and errors along the way with help 
 I use google to find solutions or ask for help. I had two mayor problems that I wrote about and how I fixed them.
 Also one day there was a problem with github that made my code not connect to my API. But after speaking to tutor support I had to pip3 install -r requirements.txt again and then it worked like usual again!
 
-![]()
+![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/gitpoderror.jpg)
 
 
 # Deployment
