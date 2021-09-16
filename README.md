@@ -116,23 +116,30 @@ But I started small and took one small step at the time. Starting with the basic
 Then I used alot of print statements to make sure that I have succeeded with the functions and also to obtain certain values.
 
 When I was finished with the most simplest functions I started with the more complicated functions, and one of the ones I worked hard on was the **search function**. Where I first needed to find the cell value based on the user's input on what they wanted to search for, and then find them in my worksheet.
+![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/Sk%C3%A4rmbild%202021-09-16%20110355.png)
 
 In order to then be able to print out the entire line of information from the cell-value that the user searched for I searched for help on google with no result and then I got help from my mentor during my mid session, who gave me a start in how to figure out how to proceed. Slack has also been very helpful with this issue I was working on for about 2-3 days until I finally figure that out. I like to thank Claire lemonnier_lead on slack to pointing me on the right direction for this!
 
 **A second issue I got** was when I testing my code and find out that when use choose number 3 in start menu, and search for a contact and got the option to delete it but enter N for no, it takes you back to start menu and when you then choose 6 for exit. The program exit but then provide you with the input message in startmenu. 
 What wrinkled my brain was that it is exactly the same code as if you had chosen the task 4 search contact in the start menu instead, and when you go that way, it works with no issues.
+![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/deleteexitbug.png)
 
 I tested everything possible in my code to try to solve the problem but with no positive results. I reach out for both my mentor and tutor support that both scratched their heads on this one, almost felt like a mystery. The tutor then passed me over to another tutor and after some testing he finally find the bug issue.
 I had not put a **break** statement in the start menu for the 3th task! When I did that, the code worked how it supposed again. Such a small error could cause a full day of troubleshooting and 4 different people's brain wrinkles. I like to thank John from tutor support for cracked the nut.
-![]()
+![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/delteerrorfix.png)
 
-#
 
 ## Validator Testing
 When I checked my code for PEP8 requirements it's showed ALL RIGHT with 0 issues.
 ![](https://github.com/StinaAxelsson/contactbook-project3/blob/main/assets/wireframes/validation.png)
 
 [Back to Top](https://github.com/StinaAxelsson/contactbook-project3#contact-book-python-application)
+
+## Bug and fix
+As I already written. I solve the small bugs and errors along the way with help of using print statements and take small steps at the time. 
+I use google to find solutions or ask for help. I had two mayor problems that I wrote about and how I fixed them.
+Also one day there was a problem with github that made my code not connect to my API. But after speaking to tutor support I had to pip3 install -r requirements.txt again and then it worked like usual again!
+
 
 # Deployment
 To build this program, I have used the Code Institutes template to be able to deploy it on Heroku and to be able to use the program on a web server. 
